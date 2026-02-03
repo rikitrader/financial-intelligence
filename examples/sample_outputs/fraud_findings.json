@@ -1,0 +1,185 @@
+[
+  {
+    "id": "F-001",
+    "module": "forensic",
+    "title": "Currency Structuring Pattern Detected",
+    "description": "Multiple cash deposits on consecutive days (January 18-20, 2024) totaling $29,994, each just below the $10,000 Currency Transaction Report threshold. Deposits of $9,999, $9,998, and $9,997 on three consecutive days strongly suggest intentional structuring under 31 U.S.C. § 5324.",
+    "severity": "critical",
+    "confidence": 0.92,
+    "detected_at": "2024-03-01T09:15:00Z",
+    "evidence_refs": [
+      {
+        "id": "EV-001",
+        "type": "bank_record",
+        "source_file": "bank.csv",
+        "line_number": 10,
+        "hash": "a3f2e1d4c5b6a7",
+        "description": "Cash deposit $9,999 on 2024-01-18"
+      },
+      {
+        "id": "EV-002",
+        "type": "bank_record",
+        "source_file": "bank.csv",
+        "line_number": 11,
+        "hash": "b4c3d2e5f6g7h8",
+        "description": "Cash deposit $9,998 on 2024-01-19"
+      },
+      {
+        "id": "EV-003",
+        "type": "bank_record",
+        "source_file": "bank.csv",
+        "line_number": 12,
+        "hash": "c5d4e3f6g7h8i9",
+        "description": "Cash deposit $9,997 on 2024-01-20"
+      }
+    ],
+    "transactions": ["CASH001", "CASH002", "CASH003"],
+    "amount_involved": 29994.00,
+    "counter_hypothesis": "Coincidental business receipts from cash-heavy operations",
+    "counter_hypothesis_likelihood": 0.08,
+    "recommended_actions": [
+      "File Suspicious Activity Report (SAR)",
+      "Engage AML counsel",
+      "Identify source of cash receipts",
+      "Review CCTV footage from deposit dates"
+    ],
+    "legal_citations": [
+      "31 U.S.C. § 5324 - Structuring transactions to evade reporting",
+      "31 C.F.R. § 1010.314 - Structuring"
+    ],
+    "tags": ["structuring", "aml", "cash", "ctr-avoidance"]
+  },
+  {
+    "id": "F-003",
+    "module": "forensic",
+    "title": "Ghost Employee Payments",
+    "description": "Payroll records show bi-weekly payments to 'Ghost Employee' (ID: E010) in Operations department totaling $18,000 over the investigation period (4 pay periods × $4,500). No corresponding HR records, badge access logs, email activity, or supervisor verification found.",
+    "severity": "high",
+    "confidence": 0.85,
+    "detected_at": "2024-03-01T09:20:00Z",
+    "evidence_refs": [
+      {
+        "id": "EV-010",
+        "type": "payroll_record",
+        "source_file": "payroll.csv",
+        "line_number": 10,
+        "hash": "k1l2m3n4o5p6",
+        "description": "E010 payment 2024-01-15"
+      },
+      {
+        "id": "EV-011",
+        "type": "payroll_record",
+        "source_file": "payroll.csv",
+        "line_number": 20,
+        "hash": "l2m3n4o5p6q7",
+        "description": "E010 payment 2024-01-31"
+      }
+    ],
+    "transactions": ["PAY-E010-0115", "PAY-E010-0131", "PAY-E010-0215", "PAY-E010-0229"],
+    "amount_involved": 18000.00,
+    "counter_hypothesis": "Legitimate remote employee with separate system access",
+    "counter_hypothesis_likelihood": 0.15,
+    "recommended_actions": [
+      "Request HR verification of E010",
+      "Review payroll approval chain",
+      "Trace bank account receiving payments",
+      "Interview Operations manager"
+    ],
+    "tags": ["ghost-employee", "payroll-fraud", "misappropriation"]
+  },
+  {
+    "id": "F-004",
+    "module": "forensic",
+    "title": "Concentrated Vendor Payments - ABC Corp",
+    "description": "ABC Corp received $46,000 (35% of total disbursements) across 6 transactions during the investigation period. Multiple invoices lack detailed descriptions, and vendor shows signs of being related party. Pattern consistent with kickback arrangement or fictitious vendor scheme.",
+    "severity": "high",
+    "confidence": 0.78,
+    "detected_at": "2024-03-01T09:25:00Z",
+    "evidence_refs": [
+      {
+        "id": "EV-020",
+        "type": "invoice",
+        "source_file": "invoices.csv",
+        "line_number": 1,
+        "hash": "v1w2x3y4z5",
+        "description": "INV-001 ABC Corp $5,000"
+      },
+      {
+        "id": "EV-021",
+        "type": "wire_record",
+        "source_file": "wires.csv",
+        "line_number": 1,
+        "hash": "w2x3y4z5a6",
+        "description": "WT001 to ABC Corp"
+      }
+    ],
+    "transactions": ["INV-001", "INV-002", "INV-005", "INV-010", "INV-013", "INV-020"],
+    "amount_involved": 46000.00,
+    "counter_hypothesis": "Legitimate high-volume consulting relationship",
+    "counter_hypothesis_likelihood": 0.22,
+    "recommended_actions": [
+      "Request ABC Corp due diligence package",
+      "Review contract and scope of work",
+      "Verify deliverables for each invoice",
+      "Check for related party indicators"
+    ],
+    "tags": ["vendor-fraud", "concentration", "kickback", "related-party"]
+  },
+  {
+    "id": "F-005",
+    "module": "forensic",
+    "title": "Round Dollar Journal Entry Concentration",
+    "description": "68% of journal entries (20 of 30) are round dollar amounts. Expected frequency for legitimate transactions is approximately 5%. High concentration suggests manual manipulation, estimation, or fraudulent entries rather than actual recorded transactions.",
+    "severity": "high",
+    "confidence": 0.75,
+    "detected_at": "2024-03-01T09:30:00Z",
+    "evidence_refs": [
+      {
+        "id": "EV-030",
+        "type": "gl_record",
+        "source_file": "gl.csv",
+        "hash": "g1h2i3j4k5",
+        "description": "GL entries analysis"
+      }
+    ],
+    "transactions": ["JE001", "JE002", "JE003", "JE004", "JE006", "JE007", "JE008", "JE012", "JE014", "JE016", "JE017", "JE018", "JE019", "JE020", "JE021", "JE023", "JE024", "JE027", "JE028", "JE030"],
+    "amount_involved": 245000.00,
+    "counter_hypothesis": "Business practices use rounded amounts for simplicity",
+    "counter_hypothesis_likelihood": 0.25,
+    "recommended_actions": [
+      "Review journal entry approval process",
+      "Test sample of round entries to source documents",
+      "Interview accounting staff about practices",
+      "Compare to prior period patterns"
+    ],
+    "tags": ["journal-entry", "round-amounts", "manipulation"]
+  },
+  {
+    "id": "F-007",
+    "module": "forensic",
+    "title": "Weekend/Holiday Transaction Activity",
+    "description": "Three transactions were recorded on dates when the office was closed (weekends). This could indicate backdating, unauthorized access, or automated system misconfigurations.",
+    "severity": "medium",
+    "confidence": 0.70,
+    "detected_at": "2024-03-01T09:35:00Z",
+    "evidence_refs": [
+      {
+        "id": "EV-040",
+        "type": "transaction",
+        "source_file": "multiple",
+        "hash": "t1u2v3w4x5",
+        "description": "Weekend activity analysis"
+      }
+    ],
+    "transactions": ["JE-SAT-001", "JE-SUN-001", "JE-SAT-002"],
+    "amount_involved": 15000.00,
+    "counter_hypothesis": "Authorized remote work or automated processes",
+    "counter_hypothesis_likelihood": 0.30,
+    "recommended_actions": [
+      "Review access logs for weekend dates",
+      "Verify automated process schedules",
+      "Interview employees who created entries"
+    ],
+    "tags": ["timing", "weekend", "backdating"]
+  }
+]

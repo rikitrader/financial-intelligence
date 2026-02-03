@@ -1,0 +1,295 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://financial-intelligence/schema.json",
+  "title": "Financial Intelligence System Schema",
+  "description": "Unified canonical schema for financial intelligence and forensic accounting",
+
+  "definitions": {
+    "ChainOfCustodyEvent": {
+      "type": "object",
+      "required": ["timestamp", "actor", "action", "source_hash"],
+      "properties": {
+        "timestamp": { "type": "string", "format": "date-time" },
+        "actor": { "type": "string", "minLength": 1 },
+        "action": { "enum": ["acquired", "transformed", "verified", "exported", "reviewed"] },
+        "source_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "result_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "tool_version": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "EvidenceRef": {
+      "type": "object",
+      "required": ["id", "type", "source_file", "source_row_id", "canonical_id", "description", "chain_of_custody"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^EVD-[A-Z0-9]{8}$" },
+        "type": { "enum": ["transaction", "document", "ledger_entry", "bank_record", "invoice", "wire", "payroll", "testimony", "exhibit"] },
+        "source_file": { "type": "string" },
+        "source_row_id": { "oneOf": [{ "type": "string" }, { "type": "integer" }] },
+        "canonical_id": { "type": "string" },
+        "description": { "type": "string" },
+        "hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "chain_of_custody": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/ChainOfCustodyEvent" },
+          "minItems": 1
+        }
+      }
+    },
+
+    "EntityIdentifier": {
+      "type": "object",
+      "required": ["type", "value", "verified", "source"],
+      "properties": {
+        "type": { "enum": ["ein", "ssn", "tin", "duns", "lei", "account_number", "vendor_id", "employee_id", "other"] },
+        "value": { "type": "string" },
+        "verified": { "type": "boolean" },
+        "source": { "type": "string" }
+      }
+    },
+
+    "Address": {
+      "type": "object",
+      "required": ["type", "line1", "city", "country"],
+      "properties": {
+        "type": { "enum": ["registered", "mailing", "physical", "billing", "unknown"] },
+        "line1": { "type": "string" },
+        "line2": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "postal_code": { "type": "string" },
+        "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "valid_from": { "type": "string", "format": "date" },
+        "valid_to": { "type": "string", "format": "date" }
+      }
+    },
+
+    "EntityRelationship": {
+      "type": "object",
+      "required": ["target_entity_id", "relationship_type", "evidence_refs"],
+      "properties": {
+        "target_entity_id": { "type": "string" },
+        "relationship_type": { "enum": ["owns", "controls", "employs", "directs", "related_to", "vendor_of", "customer_of", "subsidiary_of", "parent_of"] },
+        "ownership_percentage": { "type": "number", "minimum": 0, "maximum": 100 },
+        "effective_date": { "type": "string", "format": "date" },
+        "end_date": { "type": "string", "format": "date" },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "Entity": {
+      "type": "object",
+      "required": ["id", "type", "names", "identifiers", "addresses", "relationships", "risk_flags", "evidence_refs", "metadata"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^ENT-[A-Z0-9]{8}$" },
+        "type": { "enum": ["individual", "corporation", "partnership", "trust", "government", "unknown"] },
+        "names": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "identifiers": { "type": "array", "items": { "$ref": "#/definitions/EntityIdentifier" } },
+        "addresses": { "type": "array", "items": { "$ref": "#/definitions/Address" } },
+        "relationships": { "type": "array", "items": { "$ref": "#/definitions/EntityRelationship" } },
+        "risk_flags": { "type": "array", "items": { "type": "string" } },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } },
+        "metadata": { "type": "object" }
+      }
+    },
+
+    "Account": {
+      "type": "object",
+      "required": ["id", "account_number", "account_name", "account_type", "entity_id", "currency", "status", "evidence_refs"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^ACC-[A-Z0-9]{8}$" },
+        "account_number": { "type": "string" },
+        "account_name": { "type": "string" },
+        "account_type": { "enum": ["asset", "liability", "equity", "revenue", "expense", "bank", "unknown"] },
+        "sub_type": { "type": "string" },
+        "entity_id": { "type": "string" },
+        "institution": { "type": "string" },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "status": { "enum": ["active", "closed", "frozen", "unknown"] },
+        "opened_date": { "type": "string", "format": "date" },
+        "closed_date": { "type": "string", "format": "date" },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "Transaction": {
+      "type": "object",
+      "required": ["id", "transaction_date", "amount", "currency", "direction", "method", "description", "source_row_id", "source_file", "canonical_id", "risk_flags", "evidence_refs", "metadata"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^TXN-[A-Z0-9]{8}$" },
+        "transaction_date": { "type": "string", "format": "date" },
+        "posted_date": { "type": "string", "format": "date" },
+        "amount": { "type": "number" },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "direction": { "enum": ["debit", "credit", "unknown"] },
+        "method": { "enum": ["wire", "ach", "check", "cash", "card", "journal", "internal", "unknown"] },
+        "from_account_id": { "type": "string" },
+        "from_entity_id": { "type": "string" },
+        "to_account_id": { "type": "string" },
+        "to_entity_id": { "type": "string" },
+        "description": { "type": "string" },
+        "reference_number": { "type": "string" },
+        "memo": { "type": "string" },
+        "category": { "type": "string" },
+        "source_row_id": { "oneOf": [{ "type": "string" }, { "type": "integer" }] },
+        "source_file": { "type": "string" },
+        "canonical_id": { "type": "string" },
+        "risk_flags": { "type": "array", "items": { "type": "string" } },
+        "matched_to": { "type": "array", "items": { "type": "string" } },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } },
+        "metadata": { "type": "object" }
+      }
+    },
+
+    "LedgerEntry": {
+      "type": "object",
+      "required": ["id", "entry_date", "posting_date", "period", "account_id", "account_number", "account_name", "currency", "description", "source_row_id", "source_file", "canonical_id", "risk_flags", "evidence_refs", "metadata"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^LED-[A-Z0-9]{8}$" },
+        "entry_date": { "type": "string", "format": "date" },
+        "posting_date": { "type": "string", "format": "date" },
+        "period": { "type": "string", "pattern": "^\\d{4}-\\d{2}$" },
+        "account_id": { "type": "string" },
+        "account_number": { "type": "string" },
+        "account_name": { "type": "string" },
+        "debit_amount": { "type": "number", "minimum": 0 },
+        "credit_amount": { "type": "number", "minimum": 0 },
+        "balance": { "type": "number" },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "journal_id": { "type": "string" },
+        "description": { "type": "string" },
+        "reference": { "type": "string" },
+        "created_by": { "type": "string" },
+        "approved_by": { "type": "string" },
+        "source_row_id": { "oneOf": [{ "type": "string" }, { "type": "integer" }] },
+        "source_file": { "type": "string" },
+        "canonical_id": { "type": "string" },
+        "risk_flags": { "type": "array", "items": { "type": "string" } },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } },
+        "metadata": { "type": "object" }
+      }
+    },
+
+    "CounterHypothesis": {
+      "type": "object",
+      "required": ["hypothesis", "likelihood", "evidence_for", "evidence_against"],
+      "properties": {
+        "hypothesis": { "type": "string" },
+        "likelihood": { "enum": ["high", "medium", "low"] },
+        "evidence_for": { "type": "array", "items": { "type": "string" } },
+        "evidence_against": { "type": "array", "items": { "type": "string" } },
+        "testing_required": { "type": "string" }
+      }
+    },
+
+    "Finding": {
+      "type": "object",
+      "required": ["id", "module", "category", "title", "description", "severity", "status", "confidence", "rationale", "evidence_refs", "related_entity_ids", "related_transaction_ids", "related_account_ids", "counter_hypotheses", "created_at", "updated_at", "metadata"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^FND-[A-Z0-9]{8}$" },
+        "module": { "type": "string" },
+        "category": { "type": "string" },
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "severity": { "enum": ["critical", "high", "medium", "low", "info"] },
+        "status": { "enum": ["open", "confirmed", "refuted", "inconclusive"] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "rationale": { "type": "string" },
+        "methodology": { "type": "string" },
+        "evidence_refs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "related_entity_ids": { "type": "array", "items": { "type": "string" } },
+        "related_transaction_ids": { "type": "array", "items": { "type": "string" } },
+        "related_account_ids": { "type": "array", "items": { "type": "string" } },
+        "counter_hypotheses": { "type": "array", "items": { "$ref": "#/definitions/CounterHypothesis" } },
+        "suggested_strengthening": { "type": "array", "items": { "type": "string" } },
+        "financial_impact": {
+          "type": "object",
+          "required": ["amount_low", "amount_high", "amount_best_estimate", "currency"],
+          "properties": {
+            "amount_low": { "type": "number" },
+            "amount_high": { "type": "number" },
+            "amount_best_estimate": { "type": "number" },
+            "currency": { "type": "string" },
+            "period": { "type": "string" }
+          }
+        },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "metadata": { "type": "object" }
+      }
+    },
+
+    "ScoreDriver": {
+      "type": "object",
+      "required": ["factor", "weight", "raw_score", "weighted_contribution", "evidence_refs", "explanation"],
+      "properties": {
+        "factor": { "type": "string" },
+        "weight": { "type": "number", "minimum": 0, "maximum": 1 },
+        "raw_score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "weighted_contribution": { "type": "number" },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } },
+        "explanation": { "type": "string" }
+      }
+    },
+
+    "Score": {
+      "type": "object",
+      "required": ["module", "score_type", "value", "confidence", "drivers", "thresholds", "interpretation", "recommendations", "calculated_at", "evidence_refs"],
+      "properties": {
+        "module": { "type": "string" },
+        "score_type": { "type": "string" },
+        "value": { "type": "number", "minimum": 0, "maximum": 100 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "drivers": { "type": "array", "items": { "$ref": "#/definitions/ScoreDriver" } },
+        "trend": { "enum": ["improving", "stable", "deteriorating", "unknown"] },
+        "prior_value": { "type": "number" },
+        "prior_date": { "type": "string", "format": "date" },
+        "thresholds": {
+          "type": "object",
+          "required": ["critical", "high", "medium", "low"],
+          "properties": {
+            "critical": { "type": "number" },
+            "high": { "type": "number" },
+            "medium": { "type": "number" },
+            "low": { "type": "number" }
+          }
+        },
+        "interpretation": { "type": "string" },
+        "recommendations": { "type": "array", "items": { "type": "string" } },
+        "calculated_at": { "type": "string", "format": "date-time" },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "TestimonyEvent": {
+      "type": "object",
+      "required": ["timestamp", "speaker_role", "speaker_name", "phase", "text", "exhibit_refs", "topic_tags", "credibility_signal"],
+      "properties": {
+        "timestamp": { "type": "string", "format": "date-time" },
+        "speaker_role": { "enum": ["witness", "attorney", "judge"] },
+        "speaker_name": { "type": "string" },
+        "phase": { "enum": ["direct", "cross", "redirect", "recross", "opening", "closing", "sidebar"] },
+        "text": { "type": "string" },
+        "exhibit_refs": { "type": "array", "items": { "type": "string" } },
+        "topic_tags": { "type": "array", "items": { "type": "string" } },
+        "credibility_signal": { "enum": ["neutral", "helpful", "harmful"] }
+      }
+    },
+
+    "TrialAction": {
+      "type": "object",
+      "required": ["priority", "type", "target", "suggested_language", "rationale", "evidence_refs", "risk_tradeoff", "confidence"],
+      "properties": {
+        "priority": { "enum": ["P0", "P1", "P2"] },
+        "type": { "enum": ["impeachment", "objection", "exhibit", "reframe", "concession", "sidebar_request"] },
+        "target": { "type": "string" },
+        "suggested_language": { "type": "string" },
+        "rationale": { "type": "string" },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } },
+        "risk_tradeoff": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    }
+  }
+}

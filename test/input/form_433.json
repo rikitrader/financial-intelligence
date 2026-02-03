@@ -1,0 +1,100 @@
+{
+  "form_type": "433-A",
+  "taxpayer": {
+    "name": "Test Corporation LLC",
+    "ein": "12-3456789",
+    "address": "123 Main Street, Orlando, FL 32801"
+  },
+  "filing_date": "2024-01-15",
+  "section_1_personal_info": {
+    "marital_status": "single",
+    "dependents": 0
+  },
+  "section_3_employment": {
+    "employer": "Self-Employed",
+    "occupation": "Consultant",
+    "monthly_gross_income": 8500
+  },
+  "section_4_other_income": {
+    "interest_dividends": 125,
+    "net_business_income": 4200,
+    "rental_income": 0,
+    "other_income": 0,
+    "total_other_income": 4325
+  },
+  "section_5_assets": {
+    "bank_accounts": [
+      { "institution": "Chase Bank", "account_type": "checking", "balance": 12500 },
+      { "institution": "Bank of America", "account_type": "savings", "balance": 8750 }
+    ],
+    "investments": [
+      { "type": "brokerage", "institution": "Fidelity", "value": 45000 }
+    ],
+    "real_estate": [
+      { "description": "Primary Residence", "address": "123 Main St", "fmv": 325000, "mortgage_balance": 245000, "equity": 80000, "monthly_payment": 1850 }
+    ],
+    "vehicles": [
+      { "year": 2021, "make": "Toyota", "model": "Camry", "fmv": 22000, "loan_balance": 12500, "monthly_payment": 425 }
+    ],
+    "life_insurance_csv": 15000,
+    "other_assets": 5000,
+    "total_assets": 432250
+  },
+  "section_6_liabilities": {
+    "credit_cards": [
+      { "name": "Visa", "balance": 8500, "minimum_payment": 250 },
+      { "name": "Mastercard", "balance": 4200, "minimum_payment": 125 }
+    ],
+    "student_loans": 0,
+    "other_liabilities": 5000,
+    "total_liabilities": 275200
+  },
+  "section_7_monthly_expenses": {
+    "housing": {
+      "rent_mortgage": 1850,
+      "property_taxes": 325,
+      "insurance": 150,
+      "utilities": 275,
+      "total": 2600
+    },
+    "transportation": {
+      "vehicle_payment": 425,
+      "insurance": 125,
+      "fuel": 250,
+      "total": 800
+    },
+    "health_care": {
+      "insurance": 450,
+      "out_of_pocket": 100,
+      "total": 550
+    },
+    "food_clothing": 650,
+    "child_care": 0,
+    "court_ordered_payments": 0,
+    "other_expenses": 400,
+    "total_monthly_expenses": 5000
+  },
+  "section_8_summary": {
+    "total_monthly_income": 12825,
+    "total_monthly_expenses": 5000,
+    "net_disposable_income": 7825
+  },
+  "tax_liability": {
+    "total_owed": 45000,
+    "years_at_issue": ["2020", "2021", "2022"],
+    "breakdown": [
+      { "year": "2020", "tax": 12000, "penalties": 2400, "interest": 1800, "total": 16200 },
+      { "year": "2021", "tax": 10000, "penalties": 2000, "interest": 1200, "total": 13200 },
+      { "year": "2022", "tax": 11000, "penalties": 2200, "interest": 2400, "total": 15600 }
+    ]
+  },
+  "rcp_calculation": {
+    "quick_assets": 21250,
+    "equity_in_assets": 80000,
+    "future_income_multiplier": 12,
+    "monthly_disposable": 7825,
+    "future_income_component": 93900,
+    "calculated_rcp": 195150,
+    "notes": "RCP exceeds liability - full payment expected"
+  }
+}

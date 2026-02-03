@@ -1,0 +1,47 @@
+{
+  "notice_type": "CP2000",
+  "notice_date": "2024-01-15",
+  "tax_year": "2022",
+  "taxpayer": {
+    "name": "Test Corporation LLC",
+    "ein": "12-3456789",
+    "address": "123 Main Street, Orlando, FL 32801"
+  },
+  "proposed_changes": {
+    "description": "We received information that is different from what you reported on your tax return.",
+    "issues": [
+      {
+        "type": "Unreported Income",
+        "description": "1099-MISC from ABC Consulting Inc",
+        "reported_amount": 0,
+        "irs_amount": 25000,
+        "difference": 25000
+      },
+      {
+        "type": "Unreported Income",
+        "description": "1099-K from Payment Processor XYZ",
+        "reported_amount": 85000,
+        "irs_amount": 112500,
+        "difference": 27500
+      }
+    ],
+    "total_unreported_income": 52500
+  },
+  "proposed_tax": {
+    "additional_tax": 11025,
+    "accuracy_penalty_6662": 2205,
+    "interest": 1850,
+    "total_amount_due": 15080
+  },
+  "response_deadline": "2024-03-15",
+  "response_options": [
+    "Agree with proposed changes and pay",
+    "Partially agree with explanation",
+    "Disagree with documentation"
+  ],
+  "contact": {
+    "phone": "1-800-829-8310",
+    "fax": "1-855-xxx-xxxx",
+    "address": "Internal Revenue Service, CP2000 Unit, Ogden UT 84201"
+  }
+}

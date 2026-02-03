@@ -1,0 +1,31 @@
+date,account_number,account_name,debit,credit,description,reference
+2024-01-05,1000,Cash,15000.00,,Wire from ABC Corp,JE-001
+2024-01-05,4000,Revenue,,15000.00,Wire from ABC Corp,JE-001
+2024-01-08,6100,Payroll Expense,8500.00,,January Payroll,JE-002
+2024-01-08,1000,Cash,,8500.00,January Payroll,JE-002
+2024-01-10,6200,Office Supplies,250.00,,Staples Purchase,JE-003
+2024-01-10,1000,Cash,,250.00,Staples Purchase,JE-003
+2024-01-12,1000,Cash,25000.00,,XYZ Inc Payment,JE-004
+2024-01-12,4000,Revenue,,25000.00,XYZ Inc Payment,JE-004
+2024-01-15,6300,Rent Expense,3500.00,,January Rent,JE-005
+2024-01-15,1000,Cash,,3500.00,January Rent,JE-005
+2024-01-18,1000,Cash,12000.00,,Smith LLC Consulting,JE-006
+2024-01-18,4000,Revenue,,12000.00,Smith LLC Consulting,JE-006
+2024-01-20,6400,Insurance Expense,1200.00,,Insurance Premium,JE-007
+2024-01-20,1000,Cash,,1200.00,Insurance Premium,JE-007
+2024-01-22,1500,Equipment,4500.00,,Equipment Purchase,JE-008
+2024-01-22,1000,Cash,,4500.00,Equipment Purchase,JE-008
+2024-01-25,1000,Cash,18500.00,,DEF Corp Wire,JE-009
+2024-01-25,4000,Revenue,,18500.00,DEF Corp Wire,JE-009
+2024-01-28,6500,Utilities,450.00,,Utility Payment,JE-010
+2024-01-28,1000,Cash,,450.00,Utility Payment,JE-010
+2024-01-30,1000,Cash,9999.00,,Cash Deposit,JE-011
+2024-01-30,4000,Revenue,,9999.00,Cash Deposit,JE-011
+2024-01-31,1000,Cash,9998.00,,Cash Deposit,JE-012
+2024-01-31,4000,Revenue,,9998.00,Cash Deposit,JE-012
+2024-02-01,1000,Cash,9997.00,,Cash Deposit,JE-013
+2024-02-01,4000,Revenue,,9997.00,Cash Deposit,JE-013
+2024-02-05,1000,Cash,45000.00,,Foreign Wire,JE-014
+2024-02-05,4000,Revenue,,45000.00,Foreign Wire,JE-014
+2024-02-28,2100,Taxes Payable,,12500.00,Q1 Tax Accrual,JE-015
+2024-02-28,6600,Tax Expense,12500.00,,Q1 Tax Accrual,JE-015

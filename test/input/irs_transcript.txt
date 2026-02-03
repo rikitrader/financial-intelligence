@@ -1,0 +1,36 @@
+ACCOUNT TRANSCRIPT
+Request Date: 01-15-2024
+Response Date: 01-15-2024
+
+TAXPAYER: TEST CORPORATION LLC
+EIN: 12-3456789
+FORM: 1120S
+TAX PERIOD: Dec. 31, 2022
+
+--- ACCOUNT TRANSCRIPT ---
+
+TRANS CODE  TRANS DATE   CYCLE    AMOUNT
+----------- ------------ -------- ---------------
+150         04-15-2023   202315   $0.00          Tax return filed
+806         04-15-2023   202315   $0.00          W-2/1099 withholding credit
+971         06-20-2023   202325   $0.00          Notice issued CP2000
+290         08-15-2023   202333   $11,025.00     Additional tax assessed
+276         08-15-2023   202333   $2,205.00      Penalty for accuracy
+196         08-15-2023   202333   $1,850.00      Interest charged
+971         09-01-2023   202335   $0.00          Notice issued CP501
+971         10-15-2023   202341   $0.00          Notice issued CP503
+971         12-01-2023   202348   $0.00          Notice issued CP504
+582         01-10-2024   202402   $0.00          Lien filed
+
+ACCOUNT BALANCE: $15,080.00
+
+--- TRANSACTION CODE EXPLANATIONS ---
+150 - Return filed and tax liability assessed
+806 - Credit for withholding
+971 - Notice issued
+290 - Additional tax assessed by examination
+276 - Penalty assessed under IRC 6662
+196 - Interest charged
+582 - Notice of Federal Tax Lien filed
+
+--- END OF TRANSCRIPT ---

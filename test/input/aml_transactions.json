@@ -1,0 +1,104 @@
+{
+  "analysis_period": {
+    "start": "2024-01-01",
+    "end": "2024-03-31"
+  },
+  "account_holder": {
+    "name": "Test Corporation LLC",
+    "account_number": "****1234",
+    "account_type": "Business Checking",
+    "customer_since": "2020-01-15"
+  },
+  "transaction_summary": {
+    "total_credits": 295994,
+    "total_debits": 127450,
+    "transaction_count": 31,
+    "average_transaction": 13659
+  },
+  "suspicious_patterns": {
+    "structuring": {
+      "detected": true,
+      "transactions": [
+        { "date": "2024-01-30", "amount": 9999, "type": "deposit" },
+        { "date": "2024-01-31", "amount": 9998, "type": "deposit" },
+        { "date": "2024-02-01", "amount": 9997, "type": "deposit" }
+      ],
+      "total": 29994,
+      "days_apart": 2,
+      "ctr_threshold": 10000,
+      "risk_score": 95,
+      "bsa_reference": "31 CFR 1010.311"
+    },
+    "round_dollar_payments": {
+      "detected": true,
+      "transactions": [
+        { "date": "2024-02-12", "amount": 10000, "payee": "Unknown" },
+        { "date": "2024-02-15", "amount": 5000, "payee": "Unknown" },
+        { "date": "2024-02-18", "amount": 15000, "payee": "Unknown" }
+      ],
+      "risk_score": 75,
+      "pattern": "Possible disbursement scheme"
+    },
+    "high_risk_wires": {
+      "detected": true,
+      "transactions": [
+        { "date": "2024-02-05", "amount": 45000, "description": "Foreign Wire", "country": "Unknown" },
+        { "date": "2024-03-05", "amount": 85000, "description": "Offshore Wire", "country": "Cayman Islands" }
+      ],
+      "total": 130000,
+      "risk_score": 85,
+      "ofac_screening": "Required"
+    },
+    "large_cash": {
+      "detected": true,
+      "transactions": [
+        { "date": "2024-03-12", "amount": 25000, "type": "withdrawal" }
+      ],
+      "risk_score": 70,
+      "ctr_filed": false,
+      "ctr_required": true
+    }
+  },
+  "sar_candidates": [
+    {
+      "type": "Structuring",
+      "transactions": ["2024-01-30", "2024-01-31", "2024-02-01"],
+      "amount": 29994,
+      "narrative": "Three consecutive deposits just below $10,000 CTR threshold suggest intentional structuring to avoid reporting requirements.",
+      "recommendation": "File SAR",
+      "priority": "High"
+    },
+    {
+      "type": "Suspicious Wire Activity",
+      "transactions": ["2024-02-05", "2024-03-05"],
+      "amount": 130000,
+      "narrative": "Large wire transfers to offshore jurisdictions without clear business purpose.",
+      "recommendation": "File SAR and conduct EDD",
+      "priority": "High"
+    }
+  ],
+  "kyc_review": {
+    "last_review_date": "2023-01-15",
+    "review_due": true,
+    "beneficial_owners": [
+      { "name": "John Smith", "ownership": 60, "verified": true },
+      { "name": "Jane Smith", "ownership": 40, "verified": true }
+    ],
+    "business_type": "Consulting",
+    "expected_activity": "Moderate wire activity, monthly deposits",
+    "actual_vs_expected": "Activity exceeds expected profile",
+    "recommendation": "Enhanced due diligence required"
+  },
+  "risk_rating": {
+    "overall": "High",
+    "factors": [
+      { "factor": "Structuring pattern", "weight": 30, "score": 95 },
+      { "factor": "Offshore wires", "weight": 25, "score": 85 },
+      { "factor": "Large cash", "weight": 20, "score": 70 },
+      { "factor": "Round dollar payments", "weight": 15, "score": 75 },
+      { "factor": "KYC concerns", "weight": 10, "score": 60 }
+    ],
+    "composite_score": 81.5,
+    "threshold_exceeded": true
+  }
+}

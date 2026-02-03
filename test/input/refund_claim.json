@@ -1,0 +1,100 @@
+{
+  "claim_type": "refund_suit",
+  "taxpayer": {
+    "name": "Test Corporation LLC",
+    "ein": "12-3456789",
+    "entity_type": "S Corporation"
+  },
+  "administrative_history": {
+    "original_return": {
+      "form": "1120-S",
+      "tax_year": "2021",
+      "filed_date": "2022-03-15",
+      "tax_reported": 0,
+      "basis": "S Corporation - pass-through"
+    },
+    "amended_return": {
+      "form": "1120-S",
+      "filed_date": "2023-06-15",
+      "adjustment_type": "credit_carryback",
+      "refund_claimed": 35000,
+      "basis": "NOL carryback from 2022"
+    },
+    "payment_history": [
+      { "date": "2022-04-15", "amount": 12500, "type": "estimated_tax", "reference": "ES-2022-Q1" },
+      { "date": "2022-06-15", "amount": 12500, "type": "estimated_tax", "reference": "ES-2022-Q2" },
+      { "date": "2022-09-15", "amount": 10000, "type": "estimated_tax", "reference": "ES-2022-Q3" }
+    ],
+    "total_payments": 35000
+  },
+  "claim_denial": {
+    "date": "2023-12-15",
+    "denial_type": "full",
+    "reason": "Claimed NOL carryback not substantiated",
+    "irs_position": "Documentation insufficient to support loss claim",
+    "appeal_deadline": "2024-06-15"
+  },
+  "legal_analysis": {
+    "jurisdiction": "Federal District Court",
+    "venue": "Middle District of Florida",
+    "statute_of_limitations": {
+      "payment_date": "2022-09-15",
+      "two_year_deadline": "2024-09-15",
+      "filed_within_sol": true
+    },
+    "exhaustion_of_remedies": {
+      "claim_filed": true,
+      "six_months_elapsed": true,
+      "formal_denial_received": true,
+      "requirements_met": true
+    }
+  },
+  "refund_calculation": {
+    "tax_year": "2021",
+    "overpayment_claimed": 35000,
+    "statutory_interest": {
+      "rate": "7%",
+      "from_date": "2022-04-15",
+      "calculated_interest": 4900
+    },
+    "total_refund_sought": 39900
+  },
+  "supporting_evidence": [
+    {
+      "document": "2022 Form 1120-S",
+      "description": "Tax return showing NOL",
+      "relevance": "Establishes loss amount"
+    },
+    {
+      "document": "Financial Statements 2022",
+      "description": "Audited financial statements",
+      "relevance": "Corroborates reported loss"
+    },
+    {
+      "document": "Bank Statements",
+      "description": "Account records for 2022",
+      "relevance": "Shows actual transactions"
+    },
+    {
+      "document": "Payment Receipts",
+      "description": "IRS payment confirmations",
+      "relevance": "Establishes payments made"
+    }
+  ],
+  "litigation_strategy": {
+    "primary_arguments": [
+      "IRS failed to properly consider documentation submitted",
+      "NOL properly calculated per IRC 172",
+      "Carryback election timely made under IRC 172(b)(3)"
+    ],
+    "discovery_needed": [
+      "IRS administrative file",
+      "IRS examiner work papers",
+      "IRS internal communications"
+    ],
+    "potential_witnesses": [
+      { "name": "CPA who prepared returns", "testimony": "Return preparation and basis for NOL" },
+      { "name": "Business owner", "testimony": "Business operations and losses" }
+    ]
+  }
+}

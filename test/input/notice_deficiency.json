@@ -1,0 +1,104 @@
+{
+  "notice_type": "Notice of Deficiency",
+  "notice_number": "LTR 3219-C",
+  "notice_date": "2023-08-15",
+  "taxpayer": {
+    "name": "Test Corporation LLC",
+    "ein": "12-3456789",
+    "address": "123 Main Street, Orlando, FL 32801"
+  },
+  "tax_years": ["2020", "2021", "2022"],
+  "determination": {
+    "description": "We have determined that there is a deficiency in your income tax.",
+    "deficiency_by_year": [
+      {
+        "tax_year": "2020",
+        "tax_shown_on_return": 0,
+        "corrected_tax": 12000,
+        "deficiency": 12000,
+        "additions_to_tax": {
+          "irc_6651a1": 2700,
+          "irc_6662": 2400,
+          "interest": 1800
+        },
+        "total_for_year": 18900
+      },
+      {
+        "tax_year": "2021",
+        "tax_shown_on_return": 0,
+        "corrected_tax": 10000,
+        "deficiency": 10000,
+        "additions_to_tax": {
+          "irc_6651a1": 2250,
+          "irc_6662": 2000,
+          "interest": 1200
+        },
+        "total_for_year": 15450
+      },
+      {
+        "tax_year": "2022",
+        "tax_shown_on_return": 0,
+        "corrected_tax": 11000,
+        "deficiency": 11000,
+        "additions_to_tax": {
+          "irc_6651a1": 2475,
+          "irc_6662": 2200,
+          "interest": 850
+        },
+        "total_for_year": 16525
+      }
+    ],
+    "total_deficiency": 33000,
+    "total_additions": 17875,
+    "grand_total": 50875
+  },
+  "adjustments": [
+    {
+      "description": "Unreported income from Form 1099-MISC",
+      "amount": 75000,
+      "tax_effect": 15750,
+      "explanation": "Information received from third parties shows income not reported"
+    },
+    {
+      "description": "Disallowed deductions - lack of substantiation",
+      "amount": 45000,
+      "tax_effect": 9450,
+      "explanation": "Deductions claimed without adequate documentation"
+    },
+    {
+      "description": "Unreported Schedule K-1 income",
+      "amount": 35000,
+      "tax_effect": 7350,
+      "explanation": "Partnership income not reported"
+    }
+  ],
+  "response_deadline": "2023-11-13",
+  "response_options": [
+    {
+      "option": "Agree",
+      "description": "Sign and return the consent form with payment"
+    },
+    {
+      "option": "Petition Tax Court",
+      "description": "File a petition with the United States Tax Court within 90 days",
+      "deadline": "2023-11-13",
+      "filing_fee": 60
+    },
+    {
+      "option": "Request Appeals Conference",
+      "description": "Request a conference with IRS Appeals before petitioning"
+    }
+  ],
+  "legal_citations": [
+    "IRC 61 - Gross Income Defined",
+    "IRC 162 - Trade or Business Expenses",
+    "IRC 274 - Disallowance of Certain Expenses",
+    "IRC 6651(a)(1) - Failure to File Penalty",
+    "IRC 6662 - Accuracy-Related Penalty"
+  ],
+  "contact_info": {
+    "office": "IRS Appeals Office",
+    "phone": "1-800-829-1040",
+    "address": "Internal Revenue Service, Atlanta, GA 30348"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "generated_at": "2024-03-01T10:00:00Z",
+  "matter_id": "CLI-001",
+  "executive_summary": {
+    "overall_risk": 72.3,
+    "risk_level": "HIGH",
+    "confidence": 0.85,
+    "action_required": true,
+    "headline": "Multiple critical risk indicators require immediate board attention"
+  },
+  "module_highlights": [
+    {
+      "module": "fincen_aml",
+      "score": 81.2,
+      "status": "CRITICAL",
+      "headline": "Potential structuring and suspicious offshore transfers detected",
+      "action": "SAR filing recommended within 30 days"
+    },
+    {
+      "module": "forensic",
+      "score": 78.5,
+      "status": "HIGH",
+      "headline": "Ghost employee and vendor concentration patterns identified",
+      "action": "Immediate HR/procurement audit required"
+    },
+    {
+      "module": "controls_sox",
+      "score": 65.0,
+      "status": "HIGH",
+      "headline": "Material weaknesses in approval workflows",
+      "action": "Control remediation plan needed before next audit"
+    },
+    {
+      "module": "statistical_anomalies",
+      "score": 58.4,
+      "status": "MEDIUM",
+      "headline": "Benford's Law deviation warrants investigation",
+      "action": "Deep-dive statistical analysis recommended"
+    },
+    {
+      "module": "reconciliation",
+      "score": 42.3,
+      "status": "MEDIUM",
+      "headline": "Minor timing differences within acceptable range",
+      "action": "Continue monitoring"
+    }
+  ],
+  "key_concerns": [
+    "Currency Structuring Pattern Detected",
+    "Unauthorized Offshore Transfers",
+    "Ghost Employee Payments",
+    "Concentrated Vendor Payments",
+    "Round Dollar Journal Entry Concentration"
+  ],
+  "financial_impact": {
+    "quantified_exposure": {
+      "minimum": 47200.00,
+      "maximum": 150000.00,
+      "most_likely": 85000.00
+    },
+    "regulatory_exposure": {
+      "potential_fines": "Up to $250,000 per structuring violation",
+      "criminal_exposure": "Up to 5 years imprisonment (structuring)",
+      "reputational_risk": "HIGH"
+    },
+    "litigation_exposure": {
+      "estimated_range": "$100,000 - $500,000",
+      "probability": 0.65
+    }
+  },
+  "board_recommendations": [
+    {
+      "priority": "IMMEDIATE",
+      "recommendation": "Convene Audit Committee emergency session",
+      "rationale": "Material findings require board-level oversight"
+    },
+    {
+      "priority": "IMMEDIATE",
+      "recommendation": "Engage outside AML counsel",
+      "rationale": "SAR filing decision requires legal guidance"
+    },
+    {
+      "priority": "7 DAYS",
+      "recommendation": "Commission independent forensic investigation",
+      "rationale": "Internal conflicts may compromise investigation"
+    },
+    {
+      "priority": "30 DAYS",
+      "recommendation": "Implement enhanced wire transfer controls",
+      "rationale": "Prevent future unauthorized offshore movements"
+    }
+  ],
+  "trend_analysis": {
+    "risk_trajectory": "INCREASING",
+    "month_over_month": "+8.5 points",
+    "primary_driver": "AML indicators worsening"
+  },
+  "next_review_date": "2024-03-15",
+  "report_classification": "CONFIDENTIAL - BOARD USE ONLY"
+}

@@ -1,0 +1,211 @@
+{
+  "case_id": "2024-CV-001234",
+  "generated_at": "2024-03-01T10:00:00Z",
+  "visuals": [
+    {
+      "id": "VIS-001",
+      "title": "The Three-Day Pattern",
+      "type": "timeline_chart",
+      "purpose": "Show structuring pattern across consecutive days",
+      "use_phase": "opening",
+      "data": {
+        "dates": ["Jan 18", "Jan 19", "Jan 20"],
+        "amounts": [9999, 9998, 9997],
+        "threshold": 10000,
+        "threshold_label": "$10,000 CTR Threshold"
+      },
+      "design_notes": {
+        "colors": {
+          "deposits": "#FF4444",
+          "threshold": "#333333"
+        },
+        "annotations": [
+          {"text": "$1 below", "position": "bar_1"},
+          {"text": "$2 below", "position": "bar_2"},
+          {"text": "$3 below", "position": "bar_3"}
+        ],
+        "key_message": "Not coincidence - calculation"
+      }
+    },
+    {
+      "id": "VIS-002",
+      "title": "Money Flow Diagram",
+      "type": "flow_chart",
+      "purpose": "Visualize movement of funds through schemes",
+      "use_phase": "expert_testimony",
+      "data": {
+        "nodes": [
+          {"id": "company", "label": "Sample Corp", "type": "source"},
+          {"id": "cash", "label": "Cash Deposits\n$29,994", "type": "scheme"},
+          {"id": "offshore", "label": "Offshore Holdings\n$28,200", "type": "scheme"},
+          {"id": "ghost", "label": "Ghost Employee\n$18,000", "type": "scheme"},
+          {"id": "unknown", "label": "???", "type": "destination"}
+        ],
+        "edges": [
+          {"from": "company", "to": "cash", "label": "Structured"},
+          {"from": "company", "to": "offshore", "label": "Unauthorized"},
+          {"from": "company", "to": "ghost", "label": "Fraudulent"},
+          {"from": "cash", "to": "unknown"},
+          {"from": "offshore", "to": "unknown"},
+          {"from": "ghost", "to": "unknown"}
+        ]
+      },
+      "design_notes": {
+        "colors": {
+          "company": "#4CAF50",
+          "scheme": "#FF9800",
+          "destination": "#F44336"
+        },
+        "key_message": "Follow the money - it all disappears"
+      }
+    },
+    {
+      "id": "VIS-003",
+      "title": "The Contradiction",
+      "type": "comparison_table",
+      "purpose": "Highlight witness inconsistency",
+      "use_phase": "cross_examination",
+      "data": {
+        "headers": ["Deposition (Dec 2023)", "Trial (Feb 2024)"],
+        "rows": [
+          {
+            "topic": "Knowledge of Deposits",
+            "deposition": "\"I never saw those documents before today\"",
+            "trial": "\"Those were legitimate business receipts\""
+          },
+          {
+            "topic": "Awareness Level",
+            "deposition": "\"I had no knowledge\"",
+            "trial": "\"It was coincidental\""
+          },
+          {
+            "topic": "Board Approval",
+            "deposition": "\"All foreign transfers require board approval\"",
+            "trial": "\"These didn't require approval\""
+          }
+        ]
+      },
+      "design_notes": {
+        "format": "Side by side",
+        "highlight": "Contradictory statements in red",
+        "key_message": "Which version is the truth?"
+      }
+    },
+    {
+      "id": "VIS-004",
+      "title": "Statistical Probability",
+      "type": "probability_visual",
+      "purpose": "Show statistical impossibility of coincidence",
+      "use_phase": "expert_testimony",
+      "data": {
+        "scenario": "Four deposits all within $3 of $10,000",
+        "probability": 0.0001,
+        "comparison": {
+          "lightning_strike": 0.00006,
+          "lottery_win": 0.0000001
+        }
+      },
+      "design_notes": {
+        "format": "Probability comparison",
+        "visual": "Dot representation (1 in 10,000)",
+        "key_message": "Less likely than being struck by lightning"
+      }
+    },
+    {
+      "id": "VIS-005",
+      "title": "Ghost Employee Evidence",
+      "type": "checklist",
+      "purpose": "Show absence of employee existence evidence",
+      "use_phase": "expert_testimony",
+      "data": {
+        "employee_id": "E010",
+        "checks": [
+          {"item": "HR Personnel File", "status": "NOT FOUND"},
+          {"item": "Badge Access Records", "status": "NOT FOUND"},
+          {"item": "Email Account", "status": "NOT FOUND"},
+          {"item": "Payroll Bank Account", "status": "UNTRACEABLE"},
+          {"item": "Manager Verification", "status": "NO RECORD"},
+          {"item": "Work Product", "status": "NONE"}
+        ],
+        "payments_made": 18000
+      },
+      "design_notes": {
+        "format": "Red X marks for each missing item",
+        "contrast": "Green check for 'Payments Made: $18,000'",
+        "key_message": "No person. Just payments."
+      }
+    },
+    {
+      "id": "VIS-006",
+      "title": "Damages Summary",
+      "type": "stacked_bar",
+      "purpose": "Quantify total financial harm",
+      "use_phase": "closing",
+      "data": {
+        "categories": [
+          {"name": "Structured Cash", "amount": 29994, "color": "#FF4444"},
+          {"name": "Offshore Transfers", "amount": 28200, "color": "#FF9800"},
+          {"name": "Ghost Payroll", "amount": 18000, "color": "#9C27B0"}
+        ],
+        "total": 76194,
+        "additional": {
+          "regulatory_exposure": {"min": 100000, "max": 500000},
+          "legal_fees": {"min": 50000, "max": 150000}
+        }
+      },
+      "design_notes": {
+        "format": "Stacked bar with total",
+        "key_message": "At minimum $76,194 - potentially over $726,000"
+      }
+    },
+    {
+      "id": "VIS-007",
+      "title": "Benford's Law Analysis",
+      "type": "distribution_chart",
+      "purpose": "Show deviation from expected first-digit distribution",
+      "use_phase": "expert_testimony",
+      "data": {
+        "expected": [30.1, 17.6, 12.5, 9.7, 7.9, 6.7, 5.8, 5.1, 4.6],
+        "observed": [22.5, 12.3, 18.7, 8.2, 6.5, 7.8, 8.9, 9.1, 6.0],
+        "digits": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        "chi_square": 18.7,
+        "critical_value": 15.51,
+        "p_value": 0.017
+      },
+      "design_notes": {
+        "format": "Overlaid bar chart",
+        "highlight": "Significant deviations in red",
+        "key_message": "Numbers don't lie - these records were manipulated"
+      }
+    },
+    {
+      "id": "VIS-008",
+      "title": "Timeline of Events",
+      "type": "horizontal_timeline",
+      "purpose": "Show chronology of scheme",
+      "use_phase": "opening",
+      "data": {
+        "events": [
+          {"date": "2024-01-18", "event": "Cash deposit $9,999", "type": "structuring"},
+          {"date": "2024-01-19", "event": "Cash deposit $9,998", "type": "structuring"},
+          {"date": "2024-01-20", "event": "Cash deposit $9,997", "type": "structuring"},
+          {"date": "2024-01-20", "event": "Offshore wire $9,500", "type": "offshore"},
+          {"date": "2024-02-05", "event": "Offshore wire $9,400", "type": "offshore"},
+          {"date": "2024-02-12", "event": "Cash deposit $9,999", "type": "structuring"},
+          {"date": "2024-02-20", "event": "Offshore wire $9,300", "type": "offshore"}
+        ]
+      },
+      "design_notes": {
+        "format": "Horizontal timeline with icons",
+        "color_code": "Structuring red, Offshore blue",
+        "key_message": "A pattern of deception over two months"
+      }
+    }
+  ],
+  "presentation_order": [
+    {"phase": "opening", "visuals": ["VIS-001", "VIS-008"]},
+    {"phase": "expert_testimony", "visuals": ["VIS-002", "VIS-004", "VIS-005", "VIS-007"]},
+    {"phase": "cross_examination", "visuals": ["VIS-003"]},
+    {"phase": "closing", "visuals": ["VIS-006", "VIS-001"]}
+  ]
+}

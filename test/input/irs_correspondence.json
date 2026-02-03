@@ -1,0 +1,92 @@
+{
+  "case_id": "TEST-2024-001",
+  "taxpayer": {
+    "name": "Test Corporation LLC",
+    "ein": "12-3456789"
+  },
+  "correspondence": [
+    {
+      "date": "2023-04-15",
+      "type": "CP2000",
+      "description": "Proposed changes to 2022 return",
+      "response_deadline": "2023-06-15",
+      "amount_proposed": 15080,
+      "status": "received"
+    },
+    {
+      "date": "2023-06-20",
+      "type": "Response",
+      "description": "Taxpayer response to CP2000",
+      "documents_submitted": ["bank_statements", "1099_forms", "explanation_letter"],
+      "status": "sent"
+    },
+    {
+      "date": "2023-08-15",
+      "type": "Notice of Deficiency",
+      "description": "30-day letter",
+      "amount": 15080,
+      "response_deadline": "2023-09-14",
+      "status": "received",
+      "procedural_notes": "Notice sent via regular mail only - no certified mail"
+    },
+    {
+      "date": "2023-09-01",
+      "type": "CP501",
+      "description": "Reminder of balance due",
+      "amount": 15080,
+      "status": "received"
+    },
+    {
+      "date": "2023-10-15",
+      "type": "CP503",
+      "description": "Immediate payment required",
+      "amount": 15580,
+      "status": "received"
+    },
+    {
+      "date": "2023-12-01",
+      "type": "CP504",
+      "description": "Intent to levy",
+      "amount": 16200,
+      "status": "received",
+      "procedural_notes": "Sent before CDP rights explained"
+    },
+    {
+      "date": "2024-01-10",
+      "type": "LT11",
+      "description": "Notice of Intent to Levy and CDP Rights",
+      "amount": 16500,
+      "cdp_deadline": "2024-02-09",
+      "status": "received"
+    }
+  ],
+  "procedural_issues": [
+    {
+      "type": "notice_deficiency_mailing",
+      "description": "Notice of Deficiency sent by regular mail instead of certified",
+      "irm_reference": "IRM 4.8.9.4.1",
+      "irc_reference": "IRC 6212(a)",
+      "severity": "high"
+    },
+    {
+      "type": "premature_collection",
+      "description": "Collection notices sent before assessment finalized",
+      "irm_reference": "IRM 5.19.1.4",
+      "severity": "medium"
+    },
+    {
+      "type": "cdp_timing",
+      "description": "CDP rights notice sent after levy threat",
+      "irm_reference": "IRM 5.19.8.4.1",
+      "irc_reference": "IRC 6330(a)",
+      "severity": "high"
+    }
+  ],
+  "timeline_analysis": {
+    "first_notice": "2023-04-15",
+    "last_notice": "2024-01-10",
+    "days_elapsed": 270,
+    "response_opportunities_missed": 0,
+    "procedural_violations_found": 3
+  }
+}

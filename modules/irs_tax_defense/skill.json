@@ -1,0 +1,78 @@
+{
+  "name": "irs_tax_defense",
+  "version": "3.0.0",
+  "description": "IRS Tax Defense and Regulatory Controversy System - Integrated regulatory defense covering audit, examination, appeals, collection, litigation, and SEC compliance",
+  "capabilities": [
+    "audit_selection_analysis",
+    "examination_issue_tracking",
+    "forensic_accounting",
+    "burden_of_proof_analysis",
+    "penalty_relief_arguments",
+    "idr_response_assembly",
+    "appeals_protest_drafting",
+    "collection_defense",
+    "tax_court_prep",
+    "criminal_exposure_detection",
+    "sec_compliance_risk"
+  ],
+  "lenses": [
+    {
+      "id": "lens_a",
+      "name": "IRS Examiner Simulation",
+      "description": "Simulates IRS examiner perspective to anticipate audit focus"
+    },
+    {
+      "id": "lens_b",
+      "name": "Tax Defense Counsel",
+      "description": "Develops defense strategies and arguments"
+    },
+    {
+      "id": "lens_c",
+      "name": "Accounting Forensic Analyst",
+      "description": "Analyzes financial records for discrepancies"
+    },
+    {
+      "id": "lens_d",
+      "name": "IRS Appeals Specialist",
+      "description": "Prepares appeals protests and settlement strategies"
+    },
+    {
+      "id": "lens_e",
+      "name": "Collection Defense Planner",
+      "description": "Plans collection alternatives and defense"
+    },
+    {
+      "id": "lens_f",
+      "name": "Tax Litigation Strategist",
+      "description": "Prepares for Tax Court proceedings"
+    },
+    {
+      "id": "lens_g",
+      "name": "SEC & Financial Compliance Analyst",
+      "description": "Evaluates SEC and financial reporting risks"
+    }
+  ],
+  "authorities": [
+    "Internal Revenue Manual (IRM Parts 4, 8, 20)",
+    "Taxpayer Bill of Rights",
+    "Publication 1",
+    "Publication 5 (Appeals)",
+    "Form 12203 procedures",
+    "Treasury Regulations",
+    "SEC Rules (17 CFR)",
+    "Securities Act of 1933",
+    "Securities Exchange Act of 1934",
+    "Sarbanes-Oxley Act (SOX)",
+    "PCAOB auditing standards"
+  ],
+  "outputs": [
+    "audit_risk_assessment.md",
+    "examination_issues.md",
+    "penalty_relief_memo.md",
+    "appeals_protest.md",
+    "collection_strategy.md",
+    "litigation_readiness.md",
+    "sec_risk_report.md",
+    "final_report.md"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "forensic",
+  "version": "1.0.0",
+  "description": "Fraud detection and forensic investigation module",
+  "inputs": [
+    {
+      "name": "transactions",
+      "type": "Transaction[]",
+      "required": true,
+      "description": "Normalized transactions to analyze"
+    },
+    {
+      "name": "ledger_entries",
+      "type": "LedgerEntry[]",
+      "required": true,
+      "description": "General ledger entries"
+    },
+    {
+      "name": "entities",
+      "type": "Entity[]",
+      "required": false,
+      "description": "Resolved entities for relationship analysis"
+    },
+    {
+      "name": "config",
+      "type": "PipelineConfig",
+      "required": true,
+      "description": "Pipeline configuration with thresholds"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "findings",
+      "type": "Finding[]",
+      "description": "Fraud-related findings with evidence"
+    },
+    {
+      "name": "score",
+      "type": "Score",
+      "description": "Fraud risk score (0-100)"
+    },
+    {
+      "name": "artifacts",
+      "type": "object[]",
+      "description": "Generated artifacts including fraud_findings.json"
+    }
+  ],
+  "dependencies": ["records_intelligence", "reconciliation"],
+  "categories": [
+    "journal_entry_analysis",
+    "round_dollar_detection",
+    "weekend_holiday_activity",
+    "duplicate_transactions",
+    "unusual_timing",
+    "vendor_fraud_indicators",
+    "funnel_analysis"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "realtime_trial",
+  "version": "1.0.0",
+  "description": "Real-time trial response modeling and live strategy adjustment",
+  "inputs": [
+    {
+      "name": "testimony_stream",
+      "type": "TestimonyEvent[]",
+      "required": true,
+      "description": "Stream of testimony events"
+    },
+    {
+      "name": "prior_findings",
+      "type": "Finding[]",
+      "required": true,
+      "description": "Pre-trial findings for reference"
+    },
+    {
+      "name": "exhibits",
+      "type": "Document[]",
+      "required": false,
+      "description": "Available exhibits for impeachment"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "trial_state",
+      "type": "TrialState",
+      "description": "Current trial state and momentum"
+    },
+    {
+      "name": "actions",
+      "type": "TrialAction[]",
+      "description": "Recommended real-time actions"
+    },
+    {
+      "name": "dashboard",
+      "type": "string",
+      "description": "Real-time trial dashboard markdown"
+    }
+  ],
+  "dependencies": ["expert_witness", "jury_narrative"],
+  "capabilities": [
+    "live_testimony_analysis",
+    "contradiction_detection",
+    "impeachment_suggestions",
+    "objection_mapping",
+    "momentum_tracking",
+    "strategy_adjustment"
+  ],
+  "safety_notes": [
+    "All outputs are strategy suggestions, not legal advice",
+    "Impeachment claims require evidence_refs citations",
+    "Does not fabricate testimony or evidence"
+  ]
+}

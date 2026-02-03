@@ -1,0 +1,131 @@
+{
+  "case_id": "TEST-2024-001",
+  "witnesses": [
+    {
+      "name": "John Smith",
+      "type": "party",
+      "role": "Taxpayer/President",
+      "testimony_topics": [
+        "Business operations and income sources",
+        "Relationship with ABC Consulting",
+        "Nominee arrangement explanation",
+        "Cash deposit procedures"
+      ],
+      "documents_to_authenticate": [
+        "Bank statements",
+        "Nominee agreement",
+        "Business records"
+      ],
+      "potential_cross_examination": [
+        "Prior inconsistent statements",
+        "Knowledge of tax reporting requirements",
+        "Control over business finances"
+      ],
+      "preparation_status": "scheduled"
+    },
+    {
+      "name": "Jane Smith",
+      "type": "party",
+      "role": "Secretary/Treasurer",
+      "testimony_topics": [
+        "Bookkeeping procedures",
+        "Check signing authority",
+        "Corporate minutes and records"
+      ],
+      "documents_to_authenticate": [
+        "Corporate records",
+        "Minutes"
+      ],
+      "potential_cross_examination": [
+        "Knowledge of financial affairs",
+        "Role in return preparation"
+      ],
+      "preparation_status": "scheduled"
+    },
+    {
+      "name": "Bob CPA",
+      "type": "expert",
+      "role": "Tax return preparer",
+      "qualifications": {
+        "credentials": "CPA, licensed FL",
+        "experience_years": 25,
+        "specialization": "Small business taxation"
+      },
+      "testimony_topics": [
+        "Return preparation methodology",
+        "Advice given to taxpayer",
+        "Industry standards for substantiation"
+      ],
+      "expert_report": {
+        "filed": true,
+        "date": "2024-06-15",
+        "opinions": 3
+      ],
+      "preparation_status": "complete"
+    },
+    {
+      "name": "Third Party Witness",
+      "type": "third_party",
+      "role": "Actual income recipient",
+      "testimony_topics": [
+        "Nominee arrangement with taxpayer",
+        "Receipt of 1099 income",
+        "Reporting on own return"
+      ],
+      "subpoena_required": true,
+      "documents_to_produce": [
+        "Own tax returns",
+        "Nominee agreement",
+        "Bank records showing receipt"
+      ],
+      "preparation_status": "subpoenaed"
+    },
+    {
+      "name": "IRS Revenue Agent",
+      "type": "adverse",
+      "role": "Examining agent",
+      "anticipated_testimony": [
+        "Examination procedures followed",
+        "Basis for adjustments",
+        "Documents reviewed"
+      ],
+      "cross_examination_topics": [
+        "Failure to consider taxpayer documentation",
+        "Procedural irregularities",
+        "Burden of proof issues"
+      ],
+      "preparation_status": "anticipated"
+    }
+  ],
+  "exhibit_list": [
+    {
+      "exhibit_number": "P-1",
+      "description": "2020 Form 1120-S",
+      "offering_party": "Petitioner",
+      "authenticating_witness": "Bob CPA",
+      "objections_anticipated": false
+    },
+    {
+      "exhibit_number": "P-2",
+      "description": "Bank statements 2020-2022",
+      "offering_party": "Petitioner",
+      "authenticating_witness": "John Smith",
+      "objections_anticipated": false
+    },
+    {
+      "exhibit_number": "P-3",
+      "description": "Nominee Agreement",
+      "offering_party": "Petitioner",
+      "authenticating_witness": "Third Party Witness",
+      "objections_anticipated": true,
+      "anticipated_objection": "Hearsay, authenticity"
+    },
+    {
+      "exhibit_number": "R-1",
+      "description": "IRS Form 4549 - Examination Report",
+      "offering_party": "Respondent",
+      "authenticating_witness": "IRS Revenue Agent",
+      "objections_anticipated": false
+    }
+  ]
+}

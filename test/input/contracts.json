@@ -1,0 +1,115 @@
+{
+  "contracts": [
+    {
+      "contract_id": "CTR-001",
+      "type": "service_agreement",
+      "parties": {
+        "party_a": "Test Corporation LLC",
+        "party_b": "ABC Consulting Inc"
+      },
+      "effective_date": "2023-01-01",
+      "termination_date": "2023-12-31",
+      "value": 150000,
+      "payment_terms": "Net 30",
+      "status": "completed",
+      "deliverables": [
+        { "description": "Monthly consulting services", "value": 12500, "frequency": "monthly" }
+      ],
+      "breach_indicators": [],
+      "damages_claimed": 0
+    },
+    {
+      "contract_id": "CTR-002",
+      "type": "vendor_agreement",
+      "parties": {
+        "party_a": "Test Corporation LLC",
+        "party_b": "Shell Company LLC"
+      },
+      "effective_date": "2023-06-01",
+      "termination_date": "2024-05-31",
+      "value": 300000,
+      "payment_terms": "Net 15",
+      "status": "active",
+      "deliverables": [
+        { "description": "Management consulting", "value": 25000, "frequency": "monthly" }
+      ],
+      "breach_indicators": [
+        "No clear deliverables defined",
+        "Related party not disclosed",
+        "Payments exceed market rate"
+      ],
+      "red_flags": ["shell_company", "related_party", "above_market_rate"],
+      "damages_claimed": 0
+    },
+    {
+      "contract_id": "CTR-003",
+      "type": "employment_agreement",
+      "parties": {
+        "party_a": "Test Corporation LLC",
+        "party_b": "John Smith"
+      },
+      "effective_date": "2020-01-15",
+      "termination_date": null,
+      "value": 110000,
+      "payment_terms": "Bi-weekly",
+      "status": "active",
+      "compensation": {
+        "base_salary": 110000,
+        "bonus_target": "20%",
+        "benefits": ["health", "401k", "pto"]
+      },
+      "breach_indicators": [],
+      "damages_claimed": 0
+    },
+    {
+      "contract_id": "CTR-004",
+      "type": "lease_agreement",
+      "parties": {
+        "party_a": "Test Corporation LLC",
+        "party_b": "Commercial Properties Inc"
+      },
+      "effective_date": "2022-01-01",
+      "termination_date": "2026-12-31",
+      "value": 210000,
+      "payment_terms": "Monthly",
+      "status": "active",
+      "terms": {
+        "monthly_rent": 3500,
+        "security_deposit": 10500,
+        "annual_increase": "3%",
+        "early_termination_fee": 42000
+      },
+      "breach_indicators": [],
+      "damages_claimed": 0
+    },
+    {
+      "contract_id": "CTR-005",
+      "type": "litigation_settlement",
+      "parties": {
+        "party_a": "Test Corporation LLC",
+        "party_b": "Former Employee Jane Doe"
+      },
+      "effective_date": "2023-09-15",
+      "termination_date": "2023-09-15",
+      "value": 75000,
+      "payment_terms": "Lump sum",
+      "status": "completed",
+      "settlement_details": {
+        "original_claim": 250000,
+        "negotiated_amount": 75000,
+        "payment_date": "2023-09-30",
+        "confidentiality": true,
+        "release_type": "general"
+      },
+      "breach_indicators": [],
+      "damages_claimed": 0
+    }
+  ],
+  "summary": {
+    "total_contracts": 5,
+    "active_contracts": 3,
+    "total_contract_value": 845000,
+    "annual_obligations": 475000,
+    "contracts_with_red_flags": 1
+  }
+}

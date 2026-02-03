@@ -1,0 +1,140 @@
+[
+  {
+    "id": "AML-001",
+    "module": "fincen_aml",
+    "title": "Currency Structuring - CTR Avoidance",
+    "description": "Three consecutive cash deposits on January 18-20, 2024 totaling $29,994, each just below the $10,000 Currency Transaction Report threshold. Pattern is consistent with structuring under 31 U.S.C. § 5324 and FinCEN typology for CTR avoidance.",
+    "severity": "critical",
+    "confidence": 0.92,
+    "detected_at": "2024-03-01T09:15:00Z",
+    "sar_recommendation": true,
+    "fincen_typology": "Structuring/Smurfing",
+    "evidence_refs": [
+      {
+        "id": "EV-001",
+        "type": "bank_record",
+        "source_file": "bank.csv",
+        "line_numbers": [10, 11, 12],
+        "description": "Cash deposits CASH001-003"
+      }
+    ],
+    "transactions": [
+      {"id": "CASH001", "date": "2024-01-18", "amount": 9999.00, "type": "cash_deposit"},
+      {"id": "CASH002", "date": "2024-01-19", "amount": 9998.00, "type": "cash_deposit"},
+      {"id": "CASH003", "date": "2024-01-20", "amount": 9997.00, "type": "cash_deposit"},
+      {"id": "CASH004", "date": "2024-02-12", "amount": 9999.00, "type": "cash_deposit"}
+    ],
+    "total_amount": 39993.00,
+    "pattern_indicators": [
+      "Consecutive day deposits",
+      "Amounts within $3 of threshold",
+      "Same depositor (rjones)",
+      "No documented business purpose"
+    ],
+    "risk_factors": {
+      "geographic": "low",
+      "customer": "high",
+      "product": "medium",
+      "transaction": "critical"
+    },
+    "legal_framework": {
+      "statute": "31 U.S.C. § 5324",
+      "regulation": "31 C.F.R. § 1010.314",
+      "penalty": "Up to 5 years imprisonment, fines up to $250,000"
+    },
+    "recommended_actions": [
+      {
+        "priority": "P0",
+        "action": "File SAR within 30 days of detection",
+        "deadline": "2024-03-31",
+        "responsible": "BSA Officer"
+      },
+      {
+        "priority": "P1",
+        "action": "Document source of funds",
+        "deadline": "2024-03-15",
+        "responsible": "Compliance"
+      },
+      {
+        "priority": "P1",
+        "action": "Enhanced due diligence on depositor",
+        "deadline": "2024-03-15",
+        "responsible": "Compliance"
+      }
+    ],
+    "tags": ["structuring", "sar-required", "ctr-avoidance", "fincen"]
+  },
+  {
+    "id": "AML-002",
+    "module": "fincen_aml",
+    "title": "Suspicious Offshore Wire Transfers",
+    "description": "Three wire transfers to Offshore Holdings Ltd (Cayman Islands) totaling $28,200 over 30-day period. Amounts show descending pattern ($9,500, $9,400, $9,300) suggesting potential threshold awareness. Beneficiary is in high-risk jurisdiction with no documented business relationship.",
+    "severity": "critical",
+    "confidence": 0.88,
+    "detected_at": "2024-03-01T09:18:00Z",
+    "sar_recommendation": true,
+    "fincen_typology": "Layering/Offshore Movement",
+    "evidence_refs": [
+      {
+        "id": "EV-050",
+        "type": "wire_record",
+        "source_file": "wires.csv",
+        "line_numbers": [13, 14, 15],
+        "description": "Wire transfers WT013-015"
+      }
+    ],
+    "transactions": [
+      {"id": "WT013", "date": "2024-01-20", "amount": 9500.00, "beneficiary": "Offshore Holdings Ltd", "bank": "Cayman National Bank"},
+      {"id": "WT014", "date": "2024-02-05", "amount": 9400.00, "beneficiary": "Offshore Holdings Ltd", "bank": "Cayman National Bank"},
+      {"id": "WT015", "date": "2024-02-20", "amount": 9300.00, "beneficiary": "Offshore Holdings Ltd", "bank": "Cayman National Bank"}
+    ],
+    "total_amount": 28200.00,
+    "pattern_indicators": [
+      "High-risk jurisdiction (Cayman Islands)",
+      "Descending amounts pattern",
+      "No board approval per policy",
+      "Vague purpose ('Investment')",
+      "No verifiable business relationship"
+    ],
+    "risk_factors": {
+      "geographic": "critical",
+      "customer": "high",
+      "product": "high",
+      "transaction": "high"
+    },
+    "jurisdiction_risk": {
+      "country": "Cayman Islands",
+      "fatf_status": "Monitored",
+      "ofac_status": "Clear",
+      "eu_list": "Not listed",
+      "transparency_index": "Low"
+    },
+    "recommended_actions": [
+      {
+        "priority": "P0",
+        "action": "Board notification of policy violation",
+        "deadline": "2024-03-02",
+        "responsible": "General Counsel"
+      },
+      {
+        "priority": "P0",
+        "action": "Consider SAR filing",
+        "deadline": "2024-03-31",
+        "responsible": "BSA Officer"
+      },
+      {
+        "priority": "P1",
+        "action": "Due diligence on Offshore Holdings Ltd",
+        "deadline": "2024-03-10",
+        "responsible": "Compliance"
+      },
+      {
+        "priority": "P1",
+        "action": "Trace fund destination",
+        "deadline": "2024-03-15",
+        "responsible": "Forensics"
+      }
+    ],
+    "tags": ["offshore", "layering", "high-risk-jurisdiction", "cayman", "sar-consider"]
+  }
+]

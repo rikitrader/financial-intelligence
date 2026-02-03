@@ -1,0 +1,169 @@
+# Elite Financial Intelligence & Litigation System
+# Git Ignore File
+
+# ============================================
+# Node.js
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# ============================================
+# TypeScript
+# ============================================
+*.js
+*.js.map
+*.d.ts
+dist/
+build/
+out/
+.tsbuildinfo
+
+# ============================================
+# Environment & Configuration
+# ============================================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+config.local.json
+secrets.json
+
+# ============================================
+# IDE & Editors
+# ============================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ============================================
+# Operating System
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Sensitive Data - IMPORTANT
+# ============================================
+# Client Data
+client_data/
+client_files/
+private_data/
+confidential/
+
+# Tax Returns & IRS Documents
+*_tax_return.json
+*_tax_return.pdf
+*_transcript.txt
+*_irs_notice.pdf
+*.w2
+*.1099
+*.k1
+
+# Financial Documents
+*_bank_statement.csv
+*_bank_statement.pdf
+*_payroll.csv
+*_invoices.csv
+*.qbo
+*.qbw
+*.qbb
+
+# Personal Information
+*_ssn.txt
+*_ein.txt
+*.pii
+*.phi
+credentials*.json
+
+# ============================================
+# Output Files (Large/Generated)
+# ============================================
+# Uncomment if you don't want to track outputs
+# output/
+# reports/
+# exports/
+
+# Large files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.pdf
+!test/output/**/*.md
+
+# ============================================
+# Logs & Temporary Files
+# ============================================
+logs/
+*.log
+tmp/
+temp/
+.cache/
+*.tmp
+*.temp
+*.bak
+
+# ============================================
+# Test Artifacts
+# ============================================
+coverage/
+.nyc_output/
+*.lcov
+test-results/
+playwright-report/
+
+# ============================================
+# Documentation Builds
+# ============================================
+docs/_build/
+site/
+.docusaurus/
+
+# ============================================
+# Python (if any scripts)
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+venv/
+.venv/
+
+# ============================================
+# Jupyter Notebooks
+# ============================================
+.ipynb_checkpoints/
+*.ipynb
+
+# ============================================
+# Keep These Files
+# ============================================
+!.gitkeep
+!test/input/*.csv
+!test/input/*.json
+!test/input/*.txt
+!test/output/**/*.md
+!examples/**/*.md
+!examples/**/*.json

@@ -1,0 +1,161 @@
+{
+  "case_id": "2024-CV-001234",
+  "generated_at": "2024-03-01T10:00:00Z",
+  "persuasion_strategy": {
+    "primary_narrative": "Betrayal of Trust",
+    "emotional_anchors": ["trust", "betrayal", "accountability", "justice"],
+    "cognitive_framework": "Rule violation + concealment = intentional wrongdoing"
+  },
+  "psychological_principles": [
+    {
+      "principle": "Anchoring Effect",
+      "application": "Establish the $10,000 threshold early",
+      "implementation": "Repeatedly reference 'just under $10,000' to anchor jury on the significance",
+      "trial_phase": "opening"
+    },
+    {
+      "principle": "Pattern Recognition",
+      "application": "Humans naturally seek patterns - show the three-day deposit pattern",
+      "implementation": "Visual timeline of consecutive deposits creates undeniable pattern",
+      "trial_phase": "opening"
+    },
+    {
+      "principle": "Availability Heuristic",
+      "application": "Make the fraud vivid and memorable",
+      "implementation": "'Ghost Employee' name sticks in memory - use it repeatedly",
+      "trial_phase": "throughout"
+    },
+    {
+      "principle": "Commitment/Consistency",
+      "application": "Lock witness into positions, then show contradictions",
+      "implementation": "Cross-exam: Get admission, then impeach with prior statement",
+      "trial_phase": "cross_examination"
+    },
+    {
+      "principle": "Social Proof",
+      "application": "Reference industry standards and expert consensus",
+      "implementation": "'Every forensic accountant who looks at this pattern reaches the same conclusion'",
+      "trial_phase": "expert_testimony"
+    },
+    {
+      "principle": "Loss Aversion",
+      "application": "Frame as company's loss, not defendant's gain",
+      "implementation": "Emphasize '$76,194 taken from the company' rather than 'defendant gained $76,194'",
+      "trial_phase": "closing"
+    },
+    {
+      "principle": "Authority",
+      "application": "Leverage expert credentials",
+      "implementation": "Emphasize expert's 50+ trial testimonies, certifications, years of experience",
+      "trial_phase": "expert_testimony"
+    },
+    {
+      "principle": "Contrast Principle",
+      "application": "Compare deposition vs. trial testimony",
+      "implementation": "Side-by-side visual showing contradictions creates stark contrast",
+      "trial_phase": "cross_examination"
+    }
+  ],
+  "juror_profiles": {
+    "target_favorable": [
+      {
+        "profile": "Rule Follower",
+        "characteristics": ["Values order", "Respects authority", "Dislikes rule-breakers"],
+        "appeal_to": "Structuring violates clear federal rules",
+        "key_messages": ["He knew the rule", "He deliberately broke it", "Rules exist for a reason"]
+      },
+      {
+        "profile": "Protective Parent",
+        "characteristics": ["Protective instinct", "Concerned about family security"],
+        "appeal_to": "Company employees depend on honest leadership",
+        "key_messages": ["Trust betrayed", "Employees harmed", "Families affected"]
+      },
+      {
+        "profile": "Detail-Oriented Professional",
+        "characteristics": ["Analytical", "Appreciates evidence", "Logic-driven"],
+        "appeal_to": "Statistical evidence, documentary proof",
+        "key_messages": ["The math is clear", "Documents don't lie", "Pattern is undeniable"]
+      }
+    ],
+    "potential_challenges": [
+      {
+        "profile": "Anti-Corporate",
+        "characteristics": ["Suspicious of corporations", "Sympathetic to individuals"],
+        "risk": "May view case as corporation vs. individual",
+        "mitigation": "Emphasize harm to employees, not abstract corporate loss"
+      },
+      {
+        "profile": "Skeptic",
+        "characteristics": ["Distrustful of experts", "Questions authority"],
+        "risk": "May discount expert testimony",
+        "mitigation": "Emphasize documentary evidence over opinion"
+      }
+    ]
+  },
+  "emotional_journey": {
+    "opening": {
+      "target_emotion": "Trust/Setup",
+      "narrative_beat": "John Smith was trusted with everything",
+      "purpose": "Establish stakes before revealing betrayal"
+    },
+    "evidence_phase_1": {
+      "target_emotion": "Revelation/Anger",
+      "narrative_beat": "But he betrayed that trust",
+      "purpose": "Transform trust into sense of violation"
+    },
+    "expert_testimony": {
+      "target_emotion": "Confidence/Certainty",
+      "narrative_beat": "The evidence is overwhelming",
+      "purpose": "Build intellectual confidence in verdict"
+    },
+    "cross_examination": {
+      "target_emotion": "Disgust/Contempt",
+      "narrative_beat": "And he lied about it",
+      "purpose": "Undermine any remaining sympathy"
+    },
+    "closing": {
+      "target_emotion": "Justice/Resolution",
+      "narrative_beat": "It's time to hold him accountable",
+      "purpose": "Channel emotions into action (verdict)"
+    }
+  },
+  "objection_psychology": {
+    "defense_objections": {
+      "impact": "Can inadvertently highlight damaging evidence",
+      "our_response": "Pause after objection overruled to emphasize point"
+    },
+    "our_objections": {
+      "timing": "Object only when necessary - excessive objections annoy jury",
+      "messaging": "Brief, confident objections project competence"
+    }
+  },
+  "credibility_destruction_sequence": {
+    "step_1": {
+      "action": "Establish witness claimed expertise/knowledge",
+      "purpose": "Anchor their credibility high"
+    },
+    "step_2": {
+      "action": "Show deposition testimony",
+      "purpose": "Lock in prior position"
+    },
+    "step_3": {
+      "action": "Contrast with trial testimony",
+      "purpose": "Create cognitive dissonance"
+    },
+    "step_4": {
+      "action": "Ask 'Were you lying then or now?'",
+      "purpose": "Force jury to conclude witness is unreliable"
+    }
+  },
+  "closing_argument_structure": {
+    "recency_effect": "End with strongest points - jury remembers last items best",
+    "rule_of_three": "Three schemes: structuring, offshore, ghost employee",
+    "call_to_action": "Direct, clear ask: 'Find for the plaintiff'",
+    "inoculation": "Address defense arguments preemptively"
+  },
+  "risk_mitigation": {
+    "overreach_risk": "Don't claim more than evidence supports",
+    "sympathy_risk": "Balance accountability with fairness",
+    "complexity_risk": "Simplify financial concepts for jury"
+  }
+}

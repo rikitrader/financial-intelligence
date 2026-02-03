@@ -1,0 +1,131 @@
+{
+  "case_id": "TEST-2024-001",
+  "case_name": "Test Corporation LLC v. Commissioner",
+  "taxpayer": {
+    "name": "Test Corporation LLC",
+    "ein": "12-3456789",
+    "entity_type": "S Corporation"
+  },
+  "case_type": "deficiency",
+  "docket_number": "12345-24S",
+  "tax_years": ["2020", "2021", "2022"],
+  "total_deficiency": 45000,
+  "case_opened": "2024-01-15",
+  "current_status": "pending_trial",
+  "assigned_judge": "Hon. Sample Judge",
+  "trial_date": "2024-09-15",
+  "trial_location": "Jacksonville, FL",
+  "history": [
+    {
+      "date": "2024-01-15",
+      "event": "petition_filed",
+      "description": "Tax Court Petition filed within 90-day period",
+      "documents": ["petition.pdf", "notice_deficiency.pdf"],
+      "outcome": "accepted"
+    },
+    {
+      "date": "2024-02-01",
+      "event": "answer_filed",
+      "description": "IRS Answer filed",
+      "documents": ["answer.pdf"],
+      "issues_joined": true
+    },
+    {
+      "date": "2024-03-15",
+      "event": "discovery_commenced",
+      "description": "Initial discovery requests served",
+      "documents": ["discovery_requests.pdf"],
+      "deadline": "2024-04-14"
+    },
+    {
+      "date": "2024-04-10",
+      "event": "discovery_response",
+      "description": "IRS discovery responses received",
+      "documents": ["irs_responses.pdf"],
+      "items_received": 45,
+      "items_withheld": 3
+    },
+    {
+      "date": "2024-05-01",
+      "event": "settlement_conference",
+      "description": "Settlement conference with Appeals",
+      "settlement_proposed": 25000,
+      "settlement_offered": 35000,
+      "outcome": "no_agreement"
+    },
+    {
+      "date": "2024-06-15",
+      "event": "pretrial_memorandum",
+      "description": "Pretrial memorandum filed",
+      "documents": ["pretrial_memo.pdf"],
+      "issues_for_trial": 3
+    }
+  ],
+  "issues": [
+    {
+      "issue_number": 1,
+      "description": "Unreported 1099-MISC income from ABC Consulting",
+      "amount": 25000,
+      "irs_position": "Income not reported",
+      "taxpayer_position": "Nominee income - reported by actual recipient",
+      "evidence": ["nominee_agreement.pdf", "third_party_return.pdf"],
+      "strength": "strong"
+    },
+    {
+      "issue_number": 2,
+      "description": "Unreported 1099-K income",
+      "amount": 27500,
+      "irs_position": "Payment processor income not reported",
+      "taxpayer_position": "Duplicative - amounts included in gross receipts",
+      "evidence": ["reconciliation.xlsx", "bank_statements.pdf"],
+      "strength": "medium"
+    },
+    {
+      "issue_number": 3,
+      "description": "Accuracy penalty under IRC 6662",
+      "amount": 2205,
+      "irs_position": "Substantial understatement",
+      "taxpayer_position": "Reasonable cause - reliance on CPA",
+      "evidence": ["engagement_letter.pdf", "cpa_correspondence.pdf"],
+      "strength": "medium"
+    }
+  ],
+  "strategy_decisions": [
+    {
+      "date": "2024-01-20",
+      "decision": "Pursue S-case procedure",
+      "rationale": "Amount under $50,000 threshold, simplified procedure beneficial",
+      "made_by": "counsel"
+    },
+    {
+      "date": "2024-03-01",
+      "decision": "Focus on nominee income issue first",
+      "rationale": "Strongest evidence, may resolve 50% of deficiency",
+      "made_by": "counsel"
+    },
+    {
+      "date": "2024-05-05",
+      "decision": "Reject settlement offer",
+      "rationale": "Offered amount exceeds expected trial outcome",
+      "made_by": "client"
+    }
+  ],
+  "key_documents": [
+    { "name": "petition.pdf", "type": "filing", "date": "2024-01-15" },
+    { "name": "notice_deficiency.pdf", "type": "irs_notice", "date": "2023-08-15" },
+    { "name": "nominee_agreement.pdf", "type": "evidence", "date": "2022-01-15" },
+    { "name": "bank_statements.pdf", "type": "evidence", "date": "various" }
+  ],
+  "deadlines": [
+    { "date": "2024-07-15", "description": "Stipulation deadline" },
+    { "date": "2024-08-15", "description": "Trial brief due" },
+    { "date": "2024-09-01", "description": "Proposed findings due" },
+    { "date": "2024-09-15", "description": "Trial date" }
+  ],
+  "notes": [
+    "Client cooperative and responsive to document requests",
+    "CPA available as witness for reasonable cause defense",
+    "Third party (nominee) willing to testify",
+    "IRS counsel appears open to partial settlement on Issue 2"
+  ]
+}

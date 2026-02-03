@@ -1,0 +1,16 @@
+wire_id,date,direction,amount,originator,originator_account,beneficiary,beneficiary_account,beneficiary_bank,purpose,reference
+WT001,2024-01-02,outgoing,5000.00,Sample Corp,****1234,ABC Corp,****5678,First National Bank,Consulting Payment,INV-001
+WT002,2024-01-08,outgoing,10000.00,Sample Corp,****1234,ABC Corp,****5678,First National Bank,Project Payment,INV-002
+WT003,2024-01-15,outgoing,15000.00,Sample Corp,****1234,ABC Corp,****5678,First National Bank,Project Payment,INV-005
+WT004,2024-01-22,outgoing,5000.00,Sample Corp,****1234,DEF Inc,****9012,Commerce Bank,Marketing Materials,INV-006
+WT005,2024-01-28,outgoing,20000.00,Sample Corp,****1234,GHI LLC,****3456,Legal Trust Bank,Legal Services,INV-008
+WT006,2024-02-01,outgoing,6000.00,Sample Corp,****1234,ABC Corp,****5678,First National Bank,Consulting Payment,INV-010
+WT007,2024-02-07,outgoing,8000.00,Sample Corp,****1234,JKL Partners,****7890,Advisory Bank,Advisory Services,INV-012
+WT008,2024-02-15,outgoing,10000.00,Sample Corp,****1234,ABC Corp,****5678,First National Bank,Project Payment,INV-013
+WT009,2024-02-22,outgoing,12000.00,Sample Corp,****1234,MNO Group,****2345,Strategic Bank,Strategic Consulting,INV-015
+WT010,2024-02-28,outgoing,18000.00,Sample Corp,****1234,Tech Services LLC,****6789,Tech Credit Union,Software Development,INV-017
+WT011,2024-01-17,incoming,25000.00,Unknown Sender,****0000,Sample Corp,****1234,Sample Bank,Payment Received,INCOMING-001
+WT012,2024-02-10,incoming,15000.00,Unknown Sender,****0000,Sample Corp,****1234,Sample Bank,Payment Received,INCOMING-002
+WT013,2024-01-20,outgoing,9500.00,Sample Corp,****1234,Offshore Holdings Ltd,****8888,Cayman National Bank,Investment,INVEST-001
+WT014,2024-02-05,outgoing,9400.00,Sample Corp,****1234,Offshore Holdings Ltd,****8888,Cayman National Bank,Investment,INVEST-002
+WT015,2024-02-20,outgoing,9300.00,Sample Corp,****1234,Offshore Holdings Ltd,****8888,Cayman National Bank,Investment,INVEST-003

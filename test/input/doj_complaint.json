@@ -1,0 +1,93 @@
+{
+  "case_caption": "United States of America v. Test Corporation LLC et al.",
+  "court": "United States District Court, Middle District of Florida",
+  "case_number": "6:24-cv-00123-ABC-XYZ",
+  "filed_date": "2024-02-01",
+  "complaint_type": "civil_tax_fraud",
+  "plaintiff": {
+    "name": "United States of America",
+    "represented_by": "Department of Justice, Tax Division"
+  },
+  "defendants": [
+    {
+      "name": "Test Corporation LLC",
+      "type": "corporate",
+      "ein": "12-3456789",
+      "role": "primary"
+    },
+    {
+      "name": "John Smith",
+      "type": "individual",
+      "ssn_last4": "1234",
+      "role": "responsible_person"
+    }
+  ],
+  "claims": [
+    {
+      "count": 1,
+      "title": "Fraud and False Statements - 26 USC 7206",
+      "description": "Defendants willfully made and subscribed returns containing false statements",
+      "tax_years": ["2020", "2021", "2022"],
+      "amount_at_issue": 125000
+    },
+    {
+      "count": 2,
+      "title": "Tax Evasion - 26 USC 7201",
+      "description": "Defendants willfully attempted to evade taxes",
+      "tax_years": ["2020", "2021", "2022"],
+      "amount_at_issue": 45000
+    },
+    {
+      "count": 3,
+      "title": "Injunction - 26 USC 7402",
+      "description": "Permanent injunction against further tax violations",
+      "relief_sought": "injunctive"
+    }
+  ],
+  "factual_allegations": [
+    {
+      "paragraph": 15,
+      "allegation": "Defendants maintained two sets of books",
+      "supporting_evidence": ["Document production request DP-001"]
+    },
+    {
+      "paragraph": 18,
+      "allegation": "Defendants diverted corporate funds for personal use",
+      "amount": 85000,
+      "supporting_evidence": ["Bank records BR-001 through BR-015"]
+    },
+    {
+      "paragraph": 22,
+      "allegation": "Defendants failed to report income from cash transactions",
+      "amount": 150000,
+      "supporting_evidence": ["Third party records TPR-001"]
+    }
+  ],
+  "relief_sought": [
+    "Judgment for unpaid taxes in the amount of $125,000",
+    "Civil fraud penalties under IRC 6663",
+    "Statutory interest",
+    "Permanent injunction",
+    "Costs of this action"
+  ],
+  "discovery_status": {
+    "plaintiff_requests_outstanding": 3,
+    "defendant_responses_due": "2024-04-15",
+    "depositions_scheduled": [
+      { "deponent": "John Smith", "date": "2024-05-01" },
+      { "deponent": "Jane Smith", "date": "2024-05-02" }
+    ]
+  },
+  "procedural_history": [
+    { "date": "2024-02-01", "event": "Complaint filed" },
+    { "date": "2024-02-15", "event": "Summons issued" },
+    { "date": "2024-03-01", "event": "Answer due date" },
+    { "date": "2024-03-01", "event": "Answer filed" }
+  ],
+  "defense_strategy_notes": [
+    "Challenge sufficiency of evidence for willfulness element",
+    "Assert reasonable reliance on professional advice",
+    "Dispute third-party income attribution",
+    "Challenge jurisdiction over individual defendant"
+  ]
+}

@@ -1,0 +1,16 @@
+invoice_number,date,vendor_name,vendor_id,amount,description,category,status,payment_date,payment_ref
+INV-2024-001,2024-01-05,Office Depot,V001,1250.00,Office Supplies,Supplies,Paid,2024-01-20,CHK-1001
+INV-2024-002,2024-01-08,ABC Consulting,V002,7500.00,Consulting Services,Professional,Paid,2024-01-25,WT-1001
+INV-2024-003,2024-01-10,XYZ Technologies,V003,15000.00,Software License,Technology,Paid,2024-02-01,ACH-1001
+INV-2024-004,2024-01-12,Office Depot,V001,1250.00,Office Supplies,Supplies,Paid,2024-01-28,CHK-1002
+INV-2024-005,2024-01-15,Quick Print Shop,V004,2500.00,Marketing Materials,Marketing,Paid,2024-02-05,CHK-1003
+INV-2024-006,2024-01-18,ABC Consulting,V002,7500.00,Consulting Services,Professional,Paid,2024-02-10,WT-1002
+INV-2024-007,2024-01-20,Shell Company LLC,V005,25000.00,Management Fees,Professional,Paid,2024-02-15,WT-1003
+INV-2024-008,2024-01-22,Office Depot,V001,1250.00,Office Supplies,Supplies,Paid,2024-02-08,CHK-1004
+INV-2024-009,2024-01-25,Shell Company LLC,V005,25000.00,Consulting Fees,Professional,Paid,2024-02-20,WT-1004
+INV-2024-010,2024-01-28,Quick Print Shop,V004,2500.00,Marketing Materials,Marketing,Paid,2024-02-18,CHK-1005
+INV-2024-011,2024-02-01,ABC Consulting,V002,7500.00,Consulting Services,Professional,Paid,2024-02-25,WT-1005
+INV-2024-012,2024-02-05,Unknown Vendor,V006,10000.00,Services Rendered,Professional,Paid,2024-03-01,CASH
+INV-2024-013,2024-02-08,Shell Company LLC,V005,25000.00,Advisory Services,Professional,Paid,2024-03-05,WT-1006
+INV-2024-014,2024-02-10,Office Depot,V001,1250.00,Office Supplies,Supplies,Paid,2024-02-28,CHK-1006
+INV-2024-015,2024-02-12,Related Party Corp,V007,50000.00,Management Services,Professional,Paid,2024-03-10,WT-1007

@@ -1,0 +1,124 @@
+[
+  {
+    "id": "SEC-001",
+    "module": "sec",
+    "title": "Material Related Party Transaction Disclosure Gap",
+    "description": "Concentrated payments to ABC Corp ($46,000, 35% of disbursements) may constitute material related party transactions requiring disclosure under ASC 850 and SEC Regulation S-K Item 404. No evidence of related party disclosure in available filings.",
+    "severity": "high",
+    "confidence": 0.72,
+    "detected_at": "2024-03-01T09:40:00Z",
+    "disclosure_requirement": "ASC 850 / Reg S-K Item 404",
+    "evidence_refs": [
+      {
+        "id": "EV-060",
+        "type": "invoice",
+        "source_file": "invoices.csv",
+        "description": "ABC Corp invoices"
+      }
+    ],
+    "materiality_assessment": {
+      "quantitative": {
+        "amount": 46000.00,
+        "percent_of_expenses": 35.0,
+        "threshold_exceeded": true
+      },
+      "qualitative": {
+        "nature": "Vendor relationship",
+        "related_party_indicators": ["Common address elements", "Similar entity naming"],
+        "management_involvement": "Unknown"
+      }
+    },
+    "disclosure_requirements": [
+      "Nature of relationship",
+      "Description of transactions",
+      "Dollar amounts involved",
+      "Amounts due to/from related parties"
+    ],
+    "recommended_actions": [
+      {
+        "priority": "P1",
+        "action": "Verify ABC Corp ownership structure",
+        "deadline": "2024-03-10",
+        "responsible": "Legal"
+      },
+      {
+        "priority": "P1",
+        "action": "Review prior filings for disclosure",
+        "deadline": "2024-03-10",
+        "responsible": "SEC Counsel"
+      },
+      {
+        "priority": "P2",
+        "action": "Prepare amended disclosure if needed",
+        "deadline": "2024-03-31",
+        "responsible": "SEC Counsel"
+      }
+    ],
+    "tags": ["related-party", "disclosure", "asc-850", "regulation-s-k"]
+  },
+  {
+    "id": "SEC-002",
+    "module": "sec",
+    "title": "Potential Earnings Management - Quarter-End Adjustments",
+    "description": "Large adjusting journal entries at period end (JE016: $15,000 on 2024-01-31, JE030: $25,000 on 2024-02-29) directly to Retained Earnings. Pattern is consistent with earnings management and may require restatement evaluation under ASC 250.",
+    "severity": "medium",
+    "confidence": 0.68,
+    "detected_at": "2024-03-01T09:45:00Z",
+    "disclosure_requirement": "ASC 250 / SOX 302/404",
+    "evidence_refs": [
+      {
+        "id": "EV-070",
+        "type": "gl_record",
+        "source_file": "gl.csv",
+        "line_numbers": [31, 60],
+        "description": "Quarter-end adjustments JE016, JE030"
+      }
+    ],
+    "entries_analyzed": [
+      {
+        "entry_id": "JE016",
+        "date": "2024-01-31",
+        "amount": 15000.00,
+        "accounts": ["6500 Adjusting Entry", "3000 Retained Earnings"],
+        "preparer": "cfo",
+        "business_purpose": "Quarter End Adjustment"
+      },
+      {
+        "entry_id": "JE030",
+        "date": "2024-02-29",
+        "amount": 25000.00,
+        "accounts": ["6500 Adjusting Entry", "3000 Retained Earnings"],
+        "preparer": "cfo",
+        "business_purpose": "Month End Adjustment"
+      }
+    ],
+    "red_flags": [
+      "Direct entry to equity account",
+      "CFO as preparer (override risk)",
+      "Vague business purpose",
+      "Pattern of period-end timing",
+      "Increasing amounts over time"
+    ],
+    "recommended_actions": [
+      {
+        "priority": "P1",
+        "action": "Request supporting documentation for adjustments",
+        "deadline": "2024-03-10",
+        "responsible": "External Auditor"
+      },
+      {
+        "priority": "P1",
+        "action": "Evaluate need for restatement",
+        "deadline": "2024-03-20",
+        "responsible": "Audit Committee"
+      },
+      {
+        "priority": "P2",
+        "action": "Strengthen JE approval controls",
+        "deadline": "2024-04-30",
+        "responsible": "Controller"
+      }
+    ],
+    "tags": ["earnings-management", "journal-entry", "restatement", "sox-404"]
+  }
+]

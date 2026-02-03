@@ -1,0 +1,123 @@
+{
+  "case_id": "TEST-2024-001",
+  "discovery_type": "document_production",
+  "requests": [
+    {
+      "request_number": 1,
+      "description": "All bank statements for accounts held by taxpayer from 2020-2022",
+      "date_range": "2020-01-01 to 2022-12-31",
+      "responsive_documents": 36,
+      "status": "produced"
+    },
+    {
+      "request_number": 2,
+      "description": "All invoices issued to or received from third parties",
+      "date_range": "2020-01-01 to 2022-12-31",
+      "responsive_documents": 245,
+      "status": "produced"
+    },
+    {
+      "request_number": 3,
+      "description": "General ledger and chart of accounts",
+      "date_range": "2020-01-01 to 2022-12-31",
+      "responsive_documents": 3,
+      "status": "produced"
+    },
+    {
+      "request_number": 4,
+      "description": "All tax returns filed including K-1s received",
+      "date_range": "2018-2022",
+      "responsive_documents": 15,
+      "status": "produced"
+    },
+    {
+      "request_number": 5,
+      "description": "All communications with IRS",
+      "date_range": "2020-2024",
+      "responsive_documents": 28,
+      "status": "produced"
+    }
+  ],
+  "interrogatories": [
+    {
+      "number": 1,
+      "question": "Identify all sources of income for tax years 2020-2022",
+      "response": "Income sources include: ABC Corp consulting ($150,000), XYZ Inc services ($85,000), investment income ($12,500), rental income ($36,000)"
+    },
+    {
+      "number": 2,
+      "question": "Identify all persons with knowledge of taxpayer's financial affairs",
+      "response": "John Smith (owner), Jane Smith (secretary), Bob CPA (accountant), Mary Attorney (legal counsel)"
+    },
+    {
+      "number": 3,
+      "question": "Describe all cash transactions over $10,000",
+      "response": "Cash deposits on 1/30/24 ($9,999), 1/31/24 ($9,998), 2/1/24 ($9,997). All from business operations."
+    }
+  ],
+  "admissions": [
+    {
+      "number": 1,
+      "request": "Admit that taxpayer received 1099-MISC from ABC Consulting in 2022",
+      "response": "Admit that 1099-MISC was issued, but deny that income was reportable to taxpayer",
+      "explanation": "Nominee arrangement - income reported by actual recipient"
+    },
+    {
+      "number": 2,
+      "request": "Admit that tax returns for 2020-2022 were filed late",
+      "response": "Denied",
+      "explanation": "Returns were filed timely or with valid extension"
+    }
+  ],
+  "depositions": [
+    {
+      "deponent": "John Smith",
+      "date": "2024-05-01",
+      "location": "Counsel's office, Orlando FL",
+      "duration_hours": 4.5,
+      "key_testimony": [
+        "Described business operations",
+        "Explained cash deposit pattern",
+        "Identified nominee arrangement documentation"
+      ],
+      "exhibits_marked": 15
+    },
+    {
+      "deponent": "Bob CPA",
+      "date": "2024-05-15",
+      "location": "Counsel's office, Orlando FL",
+      "duration_hours": 2.5,
+      "key_testimony": [
+        "Described return preparation process",
+        "Explained advice given regarding deductions",
+        "Confirmed reliance by taxpayer on professional advice"
+      ],
+      "exhibits_marked": 8
+    }
+  ],
+  "expert_reports": [
+    {
+      "expert": "Dr. Financial Expert",
+      "specialty": "Forensic Accounting",
+      "report_date": "2024-06-01",
+      "opinions": [
+        "Cash deposits consistent with business operations",
+        "No evidence of income concealment",
+        "Nominee arrangement properly documented"
+      ],
+      "fee": 15000
+    }
+  ],
+  "privilege_log": [
+    {
+      "document": "Email dated 2023-01-15",
+      "privilege": "Attorney-Client",
+      "description": "Communication with legal counsel regarding tax liability"
+    },
+    {
+      "document": "Memorandum dated 2023-02-20",
+      "privilege": "Work Product",
+      "description": "Attorney analysis of audit issues"
+    }
+  ]
+}

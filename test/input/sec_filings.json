@@ -1,0 +1,106 @@
+{
+  "company": {
+    "name": "Test Corporation LLC",
+    "cik": "0001234567",
+    "ticker": "TEST",
+    "exchange": "NASDAQ",
+    "fiscal_year_end": "December 31",
+    "industry": "Technology Services"
+  },
+  "filings": [
+    {
+      "form_type": "10-K",
+      "filing_date": "2024-03-15",
+      "period": "2023-12-31",
+      "accession_number": "0001234567-24-000001",
+      "sections": {
+        "risk_factors": {
+          "page": 15,
+          "risks_disclosed": [
+            "Dependence on key personnel",
+            "Cybersecurity threats",
+            "Regulatory compliance",
+            "Market competition"
+          ]
+        },
+        "mda": {
+          "page": 25,
+          "key_metrics": {
+            "revenue_growth": "12%",
+            "gross_margin": "68%",
+            "operating_margin": "15%"
+          }
+        },
+        "financial_statements": {
+          "page": 45,
+          "auditor": "Big Four LLP",
+          "opinion": "Unqualified"
+        }
+      }
+    },
+    {
+      "form_type": "10-Q",
+      "filing_date": "2024-05-15",
+      "period": "2024-03-31",
+      "accession_number": "0001234567-24-000002",
+      "quarterly_revenue": 125000000,
+      "quarterly_net_income": 15000000
+    },
+    {
+      "form_type": "8-K",
+      "filing_date": "2024-01-20",
+      "event_type": "Acquisition",
+      "description": "Company acquired XYZ Software for $50 million"
+    }
+  ],
+  "disclosure_analysis": {
+    "related_party_transactions": [
+      {
+        "party": "Shell Company LLC",
+        "relationship": "Common ownership",
+        "transaction_type": "Management services",
+        "amount": 300000,
+        "arm_length": false,
+        "disclosed": false,
+        "red_flag": true
+      }
+    ],
+    "executive_compensation": {
+      "ceo": 2500000,
+      "cfo": 1500000,
+      "total_named_officers": 8500000,
+      "compared_to_peers": "Above median"
+    },
+    "internal_control_deficiencies": [
+      {
+        "type": "Material Weakness",
+        "description": "Inadequate segregation of duties in AP",
+        "remediation_plan": "Hire additional staff",
+        "status": "In progress"
+      }
+    ],
+    "litigation_disclosures": [
+      {
+        "case": "Smith v. Test Corporation",
+        "type": "Employment",
+        "status": "Settled",
+        "amount": 75000,
+        "material": false
+      }
+    ]
+  },
+  "compliance_issues": [
+    {
+      "issue": "Related party not disclosed",
+      "regulation": "Regulation S-K Item 404",
+      "severity": "high",
+      "recommendation": "File 8-K amendment"
+    },
+    {
+      "issue": "Material weakness not remediated",
+      "regulation": "SOX Section 404",
+      "severity": "medium",
+      "recommendation": "Accelerate remediation timeline"
+    }
+  ]
+}

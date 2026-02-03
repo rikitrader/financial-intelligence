@@ -1,0 +1,155 @@
+{
+  "case_id": "2024-CV-001234",
+  "witness": "John Smith",
+  "role": "Former CFO / Adverse Witness",
+  "generated_at": "2024-03-01T10:00:00Z",
+  "deposition_date": "2023-12-15",
+  "trial_date": "2024-02-15",
+  "contradictions": [
+    {
+      "id": "CONTRA-001",
+      "severity": "critical",
+      "topic": "Knowledge of Sub-$10K Deposits",
+      "deposition_statement": {
+        "date": "2023-12-15",
+        "page_line": "45:12-18",
+        "text": "I never saw those documents before today. I had no knowledge of any deposits under $10,000.",
+        "context": "Question about cash deposit patterns"
+      },
+      "trial_statement": {
+        "date": "2024-02-15",
+        "timestamp": "09:06:30",
+        "text": "Those were legitimate business receipts that happened to be those amounts. It was coincidental.",
+        "context": "Direct examination about structuring"
+      },
+      "contradiction_analysis": {
+        "type": "Direct contradiction",
+        "explanation": "In deposition, witness claimed no knowledge of the deposits. At trial, witness acknowledged awareness and offered an explanation for the amounts.",
+        "impeachment_value": "HIGH"
+      },
+      "impeachment_script": {
+        "setup": "Mr. Smith, you just testified that these deposits were legitimate business receipts, correct?",
+        "expected_response": "Yes.",
+        "deposition_reference": "Let me direct your attention to your deposition of December 15, 2023, page 45, beginning at line 12.",
+        "reading": "Question: 'Were you aware of any cash deposits under $10,000?' Answer: 'I never saw those documents before today. I had no knowledge of any deposits under $10,000.' Did I read that correctly?",
+        "expected_response_2": "Yes, but...",
+        "close": "So you testified under oath that you had no knowledge of these deposits, but now you're offering an explanation for them?"
+      },
+      "risk_assessment": {
+        "risk_of_rehabilitation": "MEDIUM",
+        "potential_explanation": "Witness may claim memory refreshed by document review",
+        "counter_strategy": "Emphasize the specific and categorical denial"
+      },
+      "evidence_refs": ["DEPO-001:45:12-18", "TRIAL-001:09:06:30"]
+    },
+    {
+      "id": "CONTRA-002",
+      "severity": "high",
+      "topic": "Board Approval for Foreign Transfers",
+      "deposition_statement": {
+        "date": "2023-12-15",
+        "page_line": "78:5-12",
+        "text": "All foreign wire transfers over $5,000 require board approval. That's standard policy.",
+        "context": "Question about wire transfer controls"
+      },
+      "trial_statement": {
+        "date": "2024-02-15",
+        "timestamp": "09:12:45",
+        "text": "Transfers of that size did not require board approval under our policies.",
+        "context": "Direct examination about offshore wires"
+      },
+      "contradiction_analysis": {
+        "type": "Direct contradiction",
+        "explanation": "Witness acknowledged policy requirement in deposition but denied it at trial when confronted with his own policy violations.",
+        "impeachment_value": "HIGH"
+      },
+      "impeachment_script": {
+        "setup": "You testified just now that these transfers didn't require board approval, correct?",
+        "expected_response": "Yes, investment transactions were exempt.",
+        "deposition_reference": "Let's look at your deposition, page 78, line 5.",
+        "reading": "Question: 'What is the policy for foreign wire transfers?' Answer: 'All foreign wire transfers over $5,000 require board approval. That's standard policy.' Did I read that correctly?",
+        "expected_response_2": "Yes.",
+        "documentary_support": "And Exhibit 130, the Wire Transfer Policy you signed, also requires board approval for all foreign transfers, doesn't it?",
+        "close": "So both your sworn deposition testimony and the written policy you signed contradict what you just told this jury?"
+      },
+      "risk_assessment": {
+        "risk_of_rehabilitation": "LOW",
+        "potential_explanation": "Limited - documentary evidence corroborates deposition",
+        "counter_strategy": "Layer documentary evidence with deposition testimony"
+      },
+      "evidence_refs": ["DEPO-001:78:5-12", "TRIAL-001:09:12:45", "EX-130"]
+    }
+  ],
+  "credibility_attacks": [
+    {
+      "id": "CRED-001",
+      "type": "Bias/Interest",
+      "basis": "Financial interest in outcome",
+      "questions": [
+        "You're currently a defendant in this lawsuit, correct?",
+        "If the jury finds against you, you could be personally liable?",
+        "You have a financial interest in how this jury views your actions?"
+      ]
+    },
+    {
+      "id": "CRED-002",
+      "type": "Prior Inconsistent Statement",
+      "basis": "Multiple contradictions in testimony",
+      "questions": [
+        "This is the second time today your trial testimony has contradicted your deposition, isn't it?",
+        "You were under oath in your deposition, just as you are today?",
+        "Were you lying then, or are you lying now?"
+      ]
+    }
+  ],
+  "vulnerabilities_in_our_case": [
+    {
+      "id": "VULN-001",
+      "area": "Ghost Employee Evidence",
+      "vulnerability": "No direct evidence witness created ghost employee",
+      "mitigation": "Focus on witness's supervisory responsibility",
+      "risk_level": "MEDIUM"
+    },
+    {
+      "id": "VULN-002",
+      "area": "Statistical Analysis",
+      "vulnerability": "Benford's Law has been criticized",
+      "mitigation": "Emphasize corroborating evidence",
+      "risk_level": "LOW"
+    }
+  ],
+  "recommended_cross_order": [
+    {
+      "topic": "Establish witness knowledge/control",
+      "purpose": "Foundation for responsibility",
+      "estimated_time": "5 minutes"
+    },
+    {
+      "topic": "Cash deposit contradiction",
+      "purpose": "Primary impeachment",
+      "estimated_time": "10 minutes"
+    },
+    {
+      "topic": "Board approval contradiction",
+      "purpose": "Secondary impeachment",
+      "estimated_time": "10 minutes"
+    },
+    {
+      "topic": "Financial interest",
+      "purpose": "Credibility attack",
+      "estimated_time": "5 minutes"
+    },
+    {
+      "topic": "Lock in admissions",
+      "purpose": "Prevent rehabilitation",
+      "estimated_time": "5 minutes"
+    }
+  ],
+  "confidence_assessment": {
+    "overall_impeachment_strength": 0.85,
+    "primary_contradiction_strength": 0.92,
+    "secondary_contradiction_strength": 0.88,
+    "documentary_support": 0.90,
+    "witness_likely_credibility_after_cross": 0.25
+  }
+}

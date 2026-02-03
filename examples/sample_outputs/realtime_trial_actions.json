@@ -1,0 +1,154 @@
+{
+  "session_id": "TRIAL-2024-02-15-AM",
+  "generated_at": "2024-02-15T09:15:00Z",
+  "events_processed": 24,
+  "momentum_score": 72,
+  "momentum_trend": "improving",
+  "current_actions": [
+    {
+      "id": "ACT-001",
+      "priority": "P1",
+      "type": "exhibit",
+      "target": "EX-103",
+      "status": "pending",
+      "suggested_language": "Your Honor, at this time we'd like to introduce Plaintiff's Exhibit 103, the Sample Corporation Wire Transfer Policy.",
+      "rationale": "Documentary evidence directly contradicts witness testimony on board approval requirements",
+      "evidence_refs": ["EX-103"],
+      "risk_tradeoff": "Strong foundation established through witness testimony",
+      "confidence": 0.85,
+      "optimal_timing": "Before redirect begins",
+      "created_at": "2024-02-15T09:14:30Z"
+    },
+    {
+      "id": "ACT-002",
+      "priority": "P1",
+      "type": "admission_lock",
+      "target": "John Smith",
+      "status": "pending",
+      "suggested_language": "Mr. Smith, just to be clear - you authorized all three wire transfers to Offshore Holdings, correct?",
+      "rationale": "Lock in admission before redirect provides opportunity to muddy the waters",
+      "evidence_refs": ["EX-102"],
+      "risk_tradeoff": "Low risk - witness already acknowledged authorization",
+      "confidence": 0.90,
+      "optimal_timing": "Before ending direct examination",
+      "created_at": "2024-02-15T09:14:45Z"
+    },
+    {
+      "id": "ACT-003",
+      "priority": "P2",
+      "type": "reframe",
+      "target": "narrative",
+      "status": "pending",
+      "suggested_language": "Note for closing: Witness admitted knowing the deposits were just under $10,000 and called it 'coincidental'",
+      "rationale": "Strong quote for closing argument - jury will remember 'coincidental'",
+      "evidence_refs": ["TRIAL-001:09:06:30"],
+      "risk_tradeoff": "N/A - notation only",
+      "confidence": 0.95,
+      "optimal_timing": "Record for later use",
+      "created_at": "2024-02-15T09:07:00Z"
+    }
+  ],
+  "completed_actions": [
+    {
+      "id": "ACT-004",
+      "priority": "P0",
+      "type": "impeachment",
+      "target": "John Smith",
+      "status": "completed",
+      "result": "successful",
+      "suggested_language": "Mr. Smith, in your deposition on December 15th, 2023, you stated you had never seen deposits in these amounts. Do you recall that testimony?",
+      "actual_outcome": "Witness admitted prior inconsistent statement; attempted weak rehabilitation",
+      "evidence_refs": ["DEPO-001:45:12-18", "TRIAL-001:09:07:15"],
+      "impact_assessment": {
+        "credibility_damage": 25,
+        "jury_reaction": "Visible attention shift",
+        "momentum_change": 15
+      },
+      "completed_at": "2024-02-15T09:08:00Z"
+    },
+    {
+      "id": "ACT-005",
+      "priority": "P0",
+      "type": "impeachment",
+      "target": "John Smith",
+      "status": "completed",
+      "result": "successful",
+      "suggested_language": "Exhibit 103 shows the corporate policy requires board approval for any foreign transfers. How do you reconcile that?",
+      "actual_outcome": "Witness contradicted himself again; credibility severely damaged",
+      "evidence_refs": ["EX-103", "DEPO-001:78:5-12", "TRIAL-001:09:13:30"],
+      "impact_assessment": {
+        "credibility_damage": 15,
+        "jury_reaction": "Juror #4 shaking head",
+        "momentum_change": 12
+      },
+      "completed_at": "2024-02-15T09:14:30Z"
+    }
+  ],
+  "available_impeachment": [
+    {
+      "id": "IMP-AVAIL-001",
+      "type": "potential",
+      "topic": "Offshore Holdings Relationship",
+      "trigger_condition": "If witness claims no knowledge of beneficial owners",
+      "deposition_reference": {
+        "page_line": "92:8-15",
+        "text": "I understood the principals were overseas investors"
+      },
+      "confidence": 0.70,
+      "notes": "May not arise - save for cross if needed"
+    }
+  ],
+  "objection_opportunities": [
+    {
+      "id": "OBJ-OPP-001",
+      "type": "narrative",
+      "basis": "FRE 611(c) - Leading",
+      "context": "If redirect uses leading questions to rehabilitate",
+      "action": "Object: 'Objection, leading.'",
+      "risk": "May appear obstructionist if overused",
+      "recommendation": "Use sparingly - only on clearly improper questions"
+    }
+  ],
+  "witness_tracker": {
+    "witness_name": "John Smith",
+    "role": "adverse",
+    "credibility_score": 28,
+    "credibility_trend": "declining",
+    "contradictions_exposed": 2,
+    "admissions_obtained": 3,
+    "helpful_statements": 8,
+    "harmful_statements": 2
+  },
+  "session_metrics": {
+    "start_time": "2024-02-15T09:00:00Z",
+    "current_time": "2024-02-15T09:15:00Z",
+    "duration_minutes": 15,
+    "events_per_minute": 1.6,
+    "actions_generated": 5,
+    "actions_completed": 2,
+    "actions_pending": 3,
+    "objections_made": 0,
+    "objections_faced": 1,
+    "objections_won": 0,
+    "objections_lost": 0
+  },
+  "alerts": [
+    {
+      "id": "ALERT-001",
+      "type": "opportunity",
+      "priority": "P1",
+      "message": "Witness credibility below 30 - optimal time for settlement leverage",
+      "created_at": "2024-02-15T09:14:45Z"
+    }
+  ],
+  "strategy_adjustments": [
+    {
+      "id": "ADJ-001",
+      "type": "posture_shift",
+      "from": "balanced",
+      "to": "aggressive",
+      "reason": "Strong impeachment success; maintain pressure",
+      "effective_at": "2024-02-15T09:08:00Z"
+    }
+  ]
+}

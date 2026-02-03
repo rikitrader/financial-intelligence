@@ -1,0 +1,38 @@
+{
+  "name": "statistical_anomalies",
+  "version": "1.0.0",
+  "description": "Statistical anomaly detection using Benford's Law, outlier analysis, and clustering",
+  "inputs": [
+    {
+      "name": "transactions",
+      "type": "Transaction[]",
+      "required": true,
+      "description": "Transactions for statistical analysis"
+    },
+    {
+      "name": "ledger_entries",
+      "type": "LedgerEntry[]",
+      "required": false,
+      "description": "GL entries for Benford analysis"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "findings",
+      "type": "Finding[]",
+      "description": "Statistical anomaly findings"
+    },
+    {
+      "name": "score",
+      "type": "Score",
+      "description": "Statistical anomaly risk score"
+    },
+    {
+      "name": "benford_results",
+      "type": "BenfordResult",
+      "description": "Benford's Law analysis results"
+    }
+  ],
+  "dependencies": [],
+  "methods": ["benford", "z_score", "iqr", "clustering"]
+}

@@ -1,0 +1,107 @@
+{
+  "form": "1120-S",
+  "tax_year": "2023",
+  "entity": {
+    "name": "Test Corporation LLC",
+    "ein": "12-3456789",
+    "address": "123 Main Street, Orlando, FL 32801",
+    "entity_type": "S Corporation",
+    "state_of_incorporation": "Florida",
+    "date_incorporated": "2020-01-15"
+  },
+  "income": {
+    "gross_receipts": 485000,
+    "returns_allowances": 5000,
+    "cost_of_goods_sold": 125000,
+    "gross_profit": 355000,
+    "other_income": 12500,
+    "total_income": 367500
+  },
+  "deductions": {
+    "compensation_officers": 85000,
+    "salaries_wages": 95000,
+    "repairs_maintenance": 8500,
+    "bad_debts": 2500,
+    "rents": 42000,
+    "taxes_licenses": 15000,
+    "interest": 3500,
+    "depreciation": 12500,
+    "advertising": 18000,
+    "pension_profit_sharing": 8500,
+    "employee_benefits": 12000,
+    "other_deductions": 25000,
+    "total_deductions": 327500
+  },
+  "tax_computation": {
+    "ordinary_business_income": 40000,
+    "net_rental_income": 0,
+    "portfolio_income": 2500,
+    "net_gain_loss": 5000,
+    "other_income_loss": 0,
+    "total_shareholder_income": 47500
+  },
+  "schedule_k": {
+    "ordinary_business_income": 40000,
+    "net_rental_income": 0,
+    "interest_income": 1500,
+    "dividend_income": 1000,
+    "royalties": 0,
+    "net_short_term_gain": 2500,
+    "net_long_term_gain": 2500,
+    "section_179_deduction": 5000,
+    "charitable_contributions": 2500
+  },
+  "balance_sheet": {
+    "beginning": {
+      "cash": 45000,
+      "accounts_receivable": 65000,
+      "inventory": 35000,
+      "fixed_assets": 125000,
+      "accumulated_depreciation": -45000,
+      "other_assets": 15000,
+      "total_assets": 240000,
+      "accounts_payable": 35000,
+      "loans_payable": 75000,
+      "other_liabilities": 10000,
+      "total_liabilities": 120000,
+      "retained_earnings": 85000,
+      "shareholders_equity": 120000
+    },
+    "ending": {
+      "cash": 68000,
+      "accounts_receivable": 72000,
+      "inventory": 38000,
+      "fixed_assets": 145000,
+      "accumulated_depreciation": -57500,
+      "other_assets": 18000,
+      "total_assets": 283500,
+      "accounts_payable": 42000,
+      "loans_payable": 65000,
+      "other_liabilities": 12000,
+      "total_liabilities": 119000,
+      "retained_earnings": 117000,
+      "shareholders_equity": 164500
+    }
+  },
+  "officers": [
+    {
+      "name": "John Smith",
+      "title": "President/CEO",
+      "ssn": "XXX-XX-1234",
+      "ownership_percentage": 60,
+      "compensation": 55000
+    },
+    {
+      "name": "Jane Smith",
+      "title": "Secretary/Treasurer",
+      "ssn": "XXX-XX-5678",
+      "ownership_percentage": 40,
+      "compensation": 30000
+    }
+  ],
+  "filing_status": {
+    "filed_date": "2024-03-15",
+    "extended": false,
+    "amended": false
+  }
+}

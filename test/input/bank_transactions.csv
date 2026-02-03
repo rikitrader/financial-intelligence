@@ -1,0 +1,31 @@
+date,description,amount,type,category,reference
+2024-01-05,Wire Transfer - ABC Corp,15000.00,credit,revenue,WT-001
+2024-01-08,Payroll - January,8500.00,debit,payroll,PR-001
+2024-01-10,Office Supplies - Staples,250.00,debit,expense,INV-101
+2024-01-12,Client Payment - XYZ Inc,25000.00,credit,revenue,CHK-501
+2024-01-15,Rent Payment,3500.00,debit,expense,ACH-201
+2024-01-18,Consulting Fee - Smith LLC,12000.00,credit,revenue,WT-002
+2024-01-20,Insurance Premium,1200.00,debit,expense,ACH-202
+2024-01-22,Equipment Purchase,4500.00,debit,asset,CC-301
+2024-01-25,Wire Transfer - DEF Corp,18500.00,credit,revenue,WT-003
+2024-01-28,Utilities Payment,450.00,debit,expense,ACH-203
+2024-01-30,Cash Deposit,9999.00,credit,revenue,DEP-001
+2024-01-31,Cash Deposit,9998.00,credit,revenue,DEP-002
+2024-02-01,Cash Deposit,9997.00,credit,revenue,DEP-003
+2024-02-05,Wire Transfer - Foreign,45000.00,credit,revenue,WT-004
+2024-02-08,Payroll - February,8750.00,debit,payroll,PR-002
+2024-02-10,Legal Fees,7500.00,debit,expense,INV-102
+2024-02-12,Round Dollar Payment,10000.00,debit,expense,CHK-502
+2024-02-15,Round Dollar Payment,5000.00,debit,expense,CHK-503
+2024-02-18,Round Dollar Payment,15000.00,debit,expense,CHK-504
+2024-02-20,Client Refund,2500.00,debit,expense,REF-001
+2024-02-22,Investment Income,3200.00,credit,revenue,DIV-001
+2024-02-25,Marketing Expense,1800.00,debit,expense,CC-302
+2024-02-28,Quarterly Tax Payment,12500.00,debit,tax,TAX-001
+2024-03-01,Client Payment - ABC Corp,32000.00,credit,revenue,WT-005
+2024-03-05,Wire Transfer - Offshore,85000.00,credit,revenue,WT-006
+2024-03-08,Payroll - March,9000.00,debit,payroll,PR-003
+2024-03-10,Professional Services,6500.00,debit,expense,INV-103
+2024-03-12,Cash Withdrawal,25000.00,debit,expense,WD-001
+2024-03-15,Rent Payment,3500.00,debit,expense,ACH-204
+2024-03-18,Software Subscription,500.00,debit,expense,CC-303

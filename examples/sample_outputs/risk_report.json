@@ -1,0 +1,165 @@
+{
+  "generated_at": "2024-03-01T10:00:00Z",
+  "matter_id": "CLI-001",
+  "period": {
+    "start": "2024-01-01",
+    "end": "2024-02-29"
+  },
+  "composite_score": {
+    "value": 72.3,
+    "confidence": 0.85,
+    "risk_level": "HIGH",
+    "drivers": [
+      {
+        "factor": "AML Indicators",
+        "contribution": 25.5,
+        "weight": 0.25
+      },
+      {
+        "factor": "Fraud Patterns",
+        "contribution": 22.8,
+        "weight": 0.22
+      },
+      {
+        "factor": "Control Deficiencies",
+        "contribution": 14.3,
+        "weight": 0.18
+      },
+      {
+        "factor": "Statistical Anomalies",
+        "contribution": 9.7,
+        "weight": 0.15
+      }
+    ],
+    "thresholds": {
+      "critical": 80,
+      "high": 60,
+      "medium": 40,
+      "low": 20
+    }
+  },
+  "module_scores": [
+    {
+      "module": "fincen_aml",
+      "score_type": "AML Risk",
+      "value": 81.2,
+      "confidence": 0.88,
+      "risk_level": "CRITICAL",
+      "drivers": [
+        {"factor": "Structuring Activity", "weight": 0.30, "score": 95},
+        {"factor": "Offshore Transfers", "weight": 0.25, "score": 85},
+        {"factor": "Rapid Movement", "weight": 0.15, "score": 70},
+        {"factor": "Unknown Counterparties", "weight": 0.15, "score": 65},
+        {"factor": "Geographic Risk", "weight": 0.15, "score": 75}
+      ]
+    },
+    {
+      "module": "forensic",
+      "score_type": "Fraud Risk",
+      "value": 78.5,
+      "confidence": 0.90,
+      "risk_level": "HIGH",
+      "drivers": [
+        {"factor": "Structuring Pattern", "weight": 0.25, "score": 92},
+        {"factor": "Ghost Employee", "weight": 0.20, "score": 85},
+        {"factor": "Round Dollar Concentration", "weight": 0.15, "score": 75},
+        {"factor": "Vendor Concentration", "weight": 0.20, "score": 78},
+        {"factor": "Weekend Activity", "weight": 0.10, "score": 60},
+        {"factor": "Timing Anomalies", "weight": 0.10, "score": 55}
+      ]
+    },
+    {
+      "module": "controls_sox",
+      "score_type": "Control Risk",
+      "value": 65.0,
+      "confidence": 0.75,
+      "risk_level": "HIGH",
+      "drivers": [
+        {"factor": "Missing Approvals", "weight": 0.30, "score": 80},
+        {"factor": "Segregation of Duties", "weight": 0.25, "score": 70},
+        {"factor": "Access Controls", "weight": 0.20, "score": 55},
+        {"factor": "Reconciliation Gaps", "weight": 0.15, "score": 50},
+        {"factor": "Documentation", "weight": 0.10, "score": 45}
+      ]
+    },
+    {
+      "module": "statistical_anomalies",
+      "score_type": "Statistical Risk",
+      "value": 58.4,
+      "confidence": 0.82,
+      "risk_level": "MEDIUM",
+      "drivers": [
+        {"factor": "Benford Deviation", "weight": 0.35, "score": 72},
+        {"factor": "Outlier Transactions", "weight": 0.30, "score": 55},
+        {"factor": "Clustering Anomalies", "weight": 0.20, "score": 48},
+        {"factor": "Timing Patterns", "weight": 0.15, "score": 42}
+      ]
+    },
+    {
+      "module": "reconciliation",
+      "score_type": "Reconciliation Risk",
+      "value": 42.3,
+      "confidence": 0.78,
+      "risk_level": "MEDIUM",
+      "drivers": [
+        {"factor": "Unmatched Bank Items", "weight": 0.35, "score": 45},
+        {"factor": "Unmatched GL Items", "weight": 0.30, "score": 40},
+        {"factor": "Timing Differences", "weight": 0.20, "score": 42},
+        {"factor": "Amount Variances", "weight": 0.15, "score": 38}
+      ]
+    }
+  ],
+  "findings_summary": {
+    "total": 12,
+    "by_severity": {
+      "critical": 2,
+      "high": 4,
+      "medium": 4,
+      "low": 2,
+      "info": 0
+    },
+    "by_module": {
+      "forensic": 5,
+      "fincen_aml": 2,
+      "statistical_anomalies": 2,
+      "controls_sox": 2,
+      "reconciliation": 1
+    },
+    "by_status": {
+      "open": 10,
+      "in_review": 2,
+      "closed": 0
+    }
+  },
+  "trend_analysis": {
+    "risk_trajectory": "increasing",
+    "month_over_month_change": 8.5,
+    "highest_risk_period": "2024-01-18 to 2024-01-20"
+  },
+  "recommendations_priority": [
+    {
+      "priority": "P0",
+      "action": "File SAR for structuring activity",
+      "deadline": "immediate",
+      "owner": "compliance"
+    },
+    {
+      "priority": "P0",
+      "action": "Board notification - offshore transfers",
+      "deadline": "24 hours",
+      "owner": "legal"
+    },
+    {
+      "priority": "P1",
+      "action": "Ghost employee investigation",
+      "deadline": "7 days",
+      "owner": "hr/forensics"
+    },
+    {
+      "priority": "P1",
+      "action": "ABC Corp vendor audit",
+      "deadline": "14 days",
+      "owner": "procurement"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "case_id": "2024-CV-001234",
+  "generated_at": "2024-03-01T10:00:00Z",
+  "analysis_type": "Plaintiff Settlement Analysis",
+  "executive_summary": {
+    "recommended_range": {
+      "minimum": 150000,
+      "maximum": 350000,
+      "target": 250000
+    },
+    "confidence": 0.75,
+    "walk_away_point": 125000,
+    "recommendation": "Negotiate aggressively given strong evidence; accept settlement above $200,000"
+  },
+  "damages_analysis": {
+    "compensatory": {
+      "direct_losses": {
+        "ghost_employee": 18000,
+        "offshore_transfers": 28200,
+        "description": "Quantifiable funds removed from company"
+      },
+      "total_direct": 46200
+    },
+    "consequential": {
+      "investigation_costs": {
+        "estimated": 75000,
+        "description": "Forensic accounting, legal fees to date"
+      },
+      "remediation_costs": {
+        "estimated": 50000,
+        "description": "Control improvements, policy updates"
+      },
+      "total_consequential": 125000
+    },
+    "statutory": {
+      "structuring_penalties": {
+        "per_violation": 250000,
+        "violations": 4,
+        "potential_total": 1000000,
+        "likelihood_applied": 0.25,
+        "expected_value": 250000
+      }
+    },
+    "punitive": {
+      "ratio_to_compensatory": "1x to 3x",
+      "estimated_range": {
+        "low": 46200,
+        "high": 138600
+      },
+      "likelihood": 0.40,
+      "expected_value": 36960
+    },
+    "total_best_case": 726194,
+    "total_expected": 458160,
+    "total_worst_case": 46200
+  },
+  "probability_weighted_outcomes": [
+    {
+      "scenario": "Plaintiff verdict - all claims",
+      "probability": 0.55,
+      "damages": 458160,
+      "expected_value": 251988
+    },
+    {
+      "scenario": "Plaintiff verdict - partial",
+      "probability": 0.25,
+      "damages": 171200,
+      "expected_value": 42800
+    },
+    {
+      "scenario": "Defense verdict",
+      "probability": 0.15,
+      "damages": 0,
+      "expected_value": 0
+    },
+    {
+      "scenario": "Hung jury/mistrial",
+      "probability": 0.05,
+      "damages": 0,
+      "expected_value": 0
+    }
+  ],
+  "expected_trial_value": 294788,
+  "litigation_costs": {
+    "remaining_through_verdict": {
+      "attorney_fees": 100000,
+      "expert_fees": 40000,
+      "other_costs": 15000,
+      "total": 155000
+    },
+    "appeal_risk": {
+      "probability": 0.60,
+      "additional_costs": 75000,
+      "expected_cost": 45000
+    },
+    "total_expected_costs": 200000
+  },
+  "net_expected_value": {
+    "trial_to_verdict": 94788,
+    "description": "Expected trial value minus litigation costs"
+  },
+  "defendant_analysis": {
+    "estimated_defense_costs": {
+      "through_trial": 175000,
+      "appeal": 60000,
+      "total": 235000
+    },
+    "defendant_exposure": {
+      "damages": 458160,
+      "legal_costs": 235000,
+      "total": 693160
+    },
+    "defendant_likely_settlement_range": {
+      "minimum": 100000,
+      "maximum": 275000,
+      "rationale": "Cost avoidance plus risk discount"
+    },
+    "defendant_insurance": {
+      "d_and_o_coverage": "Believed to have $1M D&O policy",
+      "impact": "Insurance may fund settlement up to policy limits"
+    }
+  },
+  "zone_of_possible_agreement": {
+    "plaintiff_minimum": 125000,
+    "defendant_maximum": 275000,
+    "overlap": true,
+    "midpoint": 200000
+  },
+  "negotiation_strategy": {
+    "opening_demand": 500000,
+    "rationale": "Anchor high based on total exposure",
+    "first_concession_to": 400000,
+    "target_settlement": 250000,
+    "final_fallback": 175000,
+    "walk_away": 125000
+  },
+  "timing_considerations": {
+    "optimal_settlement_window": "After cross-examination, before closing",
+    "rationale": "Maximum leverage after impeachment",
+    "current_leverage": "HIGH - strong evidence, defendant credibility damaged"
+  },
+  "non_monetary_terms": [
+    {
+      "term": "Confidentiality agreement",
+      "value_to_plaintiff": "Low",
+      "value_to_defendant": "High",
+      "include": true
+    },
+    {
+      "term": "No admission of liability",
+      "value_to_plaintiff": "Low",
+      "value_to_defendant": "Medium",
+      "include": true
+    },
+    {
+      "term": "Cooperation with regulatory investigation",
+      "value_to_plaintiff": "High",
+      "value_to_defendant": "Low",
+      "include": true
+    }
+  ],
+  "sensitivity_analysis": {
+    "if_benford_excluded": {
+      "probability_change": -0.10,
+      "new_expected_value": 265000,
+      "settlement_impact": "Reduce target by $25,000"
+    },
+    "if_ghost_employee_rebutted": {
+      "probability_change": -0.15,
+      "new_expected_value": 230000,
+      "settlement_impact": "Reduce target by $50,000"
+    },
+    "if_contradiction_explained": {
+      "probability_change": -0.20,
+      "new_expected_value": 195000,
+      "settlement_impact": "Significant leverage loss"
+    }
+  },
+  "recommendation": {
+    "action": "Demand $500,000 opening; target $250,000; accept anything above $175,000",
+    "confidence": 0.75,
+    "key_leverage_points": [
+      "Strong impeachment evidence",
+      "Clear documentary trail",
+      "Statistical evidence compelling",
+      "Insurance likely covers settlement"
+    ],
+    "key_risks": [
+      "Jury sympathy for individual defendant",
+      "Complex financial evidence",
+      "Appeal risk on statutory damages"
+    ]
+  }
+}
