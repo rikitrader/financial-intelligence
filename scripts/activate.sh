@@ -85,9 +85,9 @@ read -s -p "License Key: " LICENSE_KEY
 echo ""
 echo ""
 
-# Hash the expected password (SHA-256)
-# The password is: "EDUCATION2026"
-EXPECTED_HASH="a8f5f167f44f4964e6c998dee827110c" # MD5 of EDUCATION2026
+# Hash the expected password
+# Contact copyright holder for license key
+EXPECTED_HASH="42f79a5d7d17c258d4149986cd84a91e"
 
 # Hash the input
 INPUT_HASH=$(echo -n "$LICENSE_KEY" | md5)
