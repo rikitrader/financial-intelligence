@@ -134,11 +134,12 @@ The **Elite Financial Intelligence & Litigation System v5** is a comprehensive C
 - Claude Code CLI installed and configured
 - macOS, Linux, or Windows with WSL
 - Access to Claude Code skills system
+- **License key** (contact copyright holder for Personal & Educational use)
 
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/financial-intelligence.git \
+git clone https://github.com/rikitrader/financial-intelligence.git \
   ~/.claude/skills/financial-intelligence
 ```
 
@@ -148,7 +149,30 @@ git clone https://github.com/YOUR_USERNAME/financial-intelligence.git \
 cd ~/.claude/skills/financial-intelligence
 ```
 
-### Step 3: Verify Installation
+### Step 3: Activate License (REQUIRED)
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                   LICENSE ACTIVATION REQUIRED                    ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║  Before using this skill, you MUST activate your license.       ║
+║                                                                   ║
+║  Run: ./scripts/activate.sh                                     ║
+║                                                                   ║
+║  You will need a license key for Personal & Educational use.    ║
+║  Contact the copyright holder to obtain your key.               ║
+║                                                                   ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+```bash
+./scripts/activate.sh
+```
+
+When prompted, enter your license key and agree to the terms.
+
+### Step 4: Verify Installation
 
 ```bash
 ls -la
