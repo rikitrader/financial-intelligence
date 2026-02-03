@@ -11,26 +11,50 @@
 ```
 
 ![Version](https://img.shields.io/badge/version-5.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-PRIVATE%20USE%20ONLY-red.svg)
+![License](https://img.shields.io/badge/license-Personal%20%26%20Educational%20Use-blue.svg)
 ![Workflows](https://img.shields.io/badge/workflows-38-green.svg)
 ![Status](https://img.shields.io/badge/status-Production%20Ready-brightgreen.svg)
 ![Errors](https://img.shields.io/badge/errors-0-success.svg)
 
 ---
 
-## ⚠️ PROPRIETARY & CONFIDENTIAL
+## ⚠️ COPYRIGHT NOTICE & LICENSE
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║                     PRIVATE USE LICENSE                          ║
+║              PERSONAL & EDUCATIONAL USE LICENSE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  Copyright © 2026 Ricardo Prieto. All Rights Reserved.          ║
 ║                                                                   ║
-║  This software is licensed EXCLUSIVELY for PRIVATE USE.         ║
-║  Unauthorized copying, distribution, modification, or            ║
-║  commercial use is STRICTLY PROHIBITED.                         ║
+║  This software is licensed for PERSONAL and EDUCATIONAL use     ║
+║  ONLY. Commercial use is STRICTLY PROHIBITED.                   ║
 ║                                                                   ║
-║  Violation of this license may result in legal action.          ║
+║  Created using Claude Code - Anthropic's AI coding assistant    ║
+║                                                                   ║
+║  See LICENSE.md for full terms and conditions.                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+## 🤖 Built with Claude Code
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                    CREATED WITH CLAUDE CODE                      ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║  This skill and all 38 workflows were developed using Claude    ║
+║  Code, Anthropic's official AI-powered coding assistant.        ║
+║                                                                   ║
+║  Claude Code capabilities demonstrated:                          ║
+║    • Advanced skill creation and workflow design                ║
+║    • TypeScript/JavaScript module development                   ║
+║    • Comprehensive test data generation                         ║
+║    • Automated documentation generation                         ║
+║    • Git repository management and GitHub deployment            ║
+║    • Complex financial domain knowledge integration             ║
+║                                                                   ║
+║  Learn more: https://claude.ai/claude-code                      ║
+║                                                                   ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -633,34 +657,30 @@ financial-intelligence/
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║              PRIVATE USE LICENSE AGREEMENT                       ║
+║           PERSONAL & EDUCATIONAL USE LICENSE                     ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                   ║
 ║  Copyright © 2026 Ricardo Prieto. All Rights Reserved.          ║
+║  Created using Claude Code by Anthropic                         ║
 ║                                                                   ║
-║  GRANT OF LICENSE                                                ║
-║  This software is licensed exclusively for PRIVATE,             ║
-║  non-commercial use by the original authorized user.            ║
+║  PERMITTED USES                                                  ║
+║  ✓ Personal, non-commercial use                                 ║
+║  ✓ Educational and learning purposes                            ║
+║  ✓ Academic projects with attribution                           ║
+║  ✓ Studying code and documentation                              ║
 ║                                                                   ║
-║  RESTRICTIONS                                                     ║
-║  You may NOT:                                                    ║
-║  • Copy, modify, or distribute this software                    ║
-║  • Use this software for commercial purposes                    ║
-║  • Share access credentials or licenses                         ║
-║  • Reverse engineer or decompile                                ║
-║  • Remove copyright or license notices                          ║
+║  PROHIBITED USES                                                  ║
+║  ✗ Commercial use or profit                                     ║
+║  ✗ Redistribution without permission                            ║
+║  ✗ Removing copyright notices                                   ║
+║  ✗ Using outputs as professional advice                         ║
 ║                                                                   ║
-║  NO WARRANTY                                                      ║
-║  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY      ║
-║  KIND, EXPRESS OR IMPLIED.                                       ║
+║  DISCLAIMER                                                       ║
+║  This software is for EDUCATIONAL purposes only.                ║
+║  It does NOT provide legal, tax, financial, or accounting       ║
+║  advice. Always consult qualified professionals.                ║
 ║                                                                   ║
-║  LIMITATION OF LIABILITY                                          ║
-║  IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY       ║
-║  CLAIM, DAMAGES OR OTHER LIABILITY.                             ║
-║                                                                   ║
-║  NOT LEGAL ADVICE                                                 ║
-║  This software provides analytical tools only and does not      ║
-║  constitute legal, tax, or financial advice.                    ║
+║  See LICENSE.md for complete terms.                             ║
 ║                                                                   ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
@@ -669,7 +689,7 @@ financial-intelligence/
 
 ## Support
 
-This is private software. For authorized users only.
+This software is provided for personal and educational use. For questions about permitted uses, see LICENSE.md.
 
 ---
 
@@ -687,7 +707,16 @@ This is private software. For authorized users only.
 └─────────────────────────────────────────────────────────────┘
 ```
 
+---
+
+**Created with [Claude Code](https://claude.ai/claude-code) by Anthropic**
+
+*Demonstrating AI-assisted skill development for complex financial workflows*
+
+---
+
 Copyright © 2026 Ricardo Prieto. All Rights Reserved.
-**PRIVATE USE ONLY**
+
+**PERSONAL & EDUCATIONAL USE ONLY | NOT FOR COMMERCIAL USE**
 
 </div>
