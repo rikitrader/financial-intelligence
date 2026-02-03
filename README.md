@@ -24,7 +24,7 @@
 ╔══════════════════════════════════════════════════════════════════╗
 ║                     PRIVATE USE LICENSE                          ║
 ╠══════════════════════════════════════════════════════════════════╣
-║  Copyright © 2024 Ricardo Prieto. All Rights Reserved.          ║
+║  Copyright © 2026 Ricardo Prieto. All Rights Reserved.          ║
 ║                                                                   ║
 ║  This software is licensed EXCLUSIVELY for PRIVATE USE.         ║
 ║  Unauthorized copying, distribution, modification, or            ║
@@ -621,7 +621,7 @@ financial-intelligence/
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 5.0.0 | 2024-02-02 | Initial release with 38 workflows |
+| 5.0.0 | 2026-02-02 | Initial release with 38 workflows |
 | | | - 21 IRS tax defense modules |
 | | | - Comprehensive forensic suite |
 | | | - Full litigation support |
@@ -636,7 +636,7 @@ financial-intelligence/
 ║              PRIVATE USE LICENSE AGREEMENT                       ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                   ║
-║  Copyright © 2024 Ricardo Prieto. All Rights Reserved.          ║
+║  Copyright © 2026 Ricardo Prieto. All Rights Reserved.          ║
 ║                                                                   ║
 ║  GRANT OF LICENSE                                                ║
 ║  This software is licensed exclusively for PRIVATE,             ║
@@ -687,7 +687,7 @@ This is private software. For authorized users only.
 └─────────────────────────────────────────────────────────────┘
 ```
 
-Copyright © 2024 Ricardo Prieto. All Rights Reserved.
+Copyright © 2026 Ricardo Prieto. All Rights Reserved.
 **PRIVATE USE ONLY**
 
 </div>

@@ -2,7 +2,7 @@
 
 ## Elite Financial Intelligence & Litigation System v5
 
-**Copyright © 2024 Ricardo Prieto. All Rights Reserved.**
+**Copyright © 2026 Ricardo Prieto. All Rights Reserved.**
 
 ---
 
@@ -186,7 +186,7 @@ BY USING THIS SOFTWARE, THE LICENSEE ACKNOWLEDGES THAT THEY HAVE READ THIS LICEN
 
 ```
 Elite Financial Intelligence & Litigation System v5
-Copyright © 2024 Ricardo Prieto
+Copyright © 2026 Ricardo Prieto
 All Rights Reserved
 
 PRIVATE USE ONLY - NOT FOR DISTRIBUTION

@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [5.0.0] - 2024-02-02
+## [5.0.0] - 2026-02-02
 
 ### Added
 
@@ -115,6 +115,6 @@ This is private software. For authorized users only.
 
 ```
 Elite Financial Intelligence & Litigation System
-Copyright © 2024 Ricardo Prieto
+Copyright © 2026 Ricardo Prieto
 All Rights Reserved - Private Use Only
 ```
